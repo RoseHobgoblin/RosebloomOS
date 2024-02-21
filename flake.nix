@@ -20,15 +20,25 @@
       config.allowUnfree = true;
     };
   in {
-    nixosConfigurations."rosebloomos" = nixpkgs.lib.nixosSystem {
+    #nixosConfigurations."rosebloomos" = nixpkgs.lib.nixosSystem {
+    #  specialArgs = { inherit inputs system; };
+    #  modules = [ ./system/config.nix ];
+    #};
+
+    nixosConfigurations."hortus" = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs system; };
-      modules = [ ./rosebloomos/config.nix ];
+      modules = [ ./hosts/hortus/host.nix ];
+    };
+
+    nixosConfigurations."silva" = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs system; };
+      modules = [ ./hosts/silva/host.nix ];
     };
 
     homeConfigurations."rosa" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = { inherit inputs; };
-      modules = [ ./home-manager/home.nix ];
+      modules = [ ./home/home.nix ];
     };
   };
 }

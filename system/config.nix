@@ -42,6 +42,7 @@ in
     libnotify
     rosebloom-rebuild
     bloomshot
+    cava
   ];
 
   users.users = {
@@ -53,10 +54,9 @@ in
     };
   };
 
-  networking = {
-    hostName = "hortus";
-    networkmanager.enable = true;
-  };
+  networking.networkmanager.enable = true;
+
+
 
   security.rtkit.enable = true;
   services.pipewire = {

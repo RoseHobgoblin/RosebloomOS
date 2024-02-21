@@ -1,6 +1,5 @@
 { pkgs, ... }: {
   imports = [
-    ../rosebloomos/bloomutils.nix
 #    ./firefox.nix
     ./foot.nix
 #    ./git.nix 

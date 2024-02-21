@@ -2,7 +2,7 @@
   imports = [
 #    ./firefox.nix
     ./modules/foot.nix
-    #./modules/hyprland.nix
+    ./modules/hyprland.nix
 #    ./git.nix 
 #    ./starship.nix
 #    ./tmux.nix

@@ -1,198 +1,153 @@
-{ 
+ let
+    Mod = "SUPER";
+    Modshift = "${Mod}SHIFT";
+in {
   wayland.windowManager.hyprland = {
 
     enable = true;
 
     settings = {
-        #-# See https://wiki.hyprland.org/Configuring/Monitors/
-        monitor=,preferred,auto,auto
+        monitor=",preferred,auto,auto";
 
+        exec-once = [
+            "waybar"
+            "swaybg -o DP-1 -i Pictures/Wallpapers/result1.png -o HDMI-A-1 -i Pictures/Wallpapers/rosepineblack.png"
+        ];
 
-        # See https://wiki.hyprland.org/Configuring/Keywords/ for more
+        env = "XCURSOR_SIZE,24";
 
-        # Execute your favorite apps at launch
-        # exec-once = waybar & hyprpaper & firefox
+        input = {
+            kb_layout = "us";
 
-        exec-once = waybar
-        exec-once = swaybg -o DP-1 -i Pictures/Wallpapers/result1.png -o HDMI-A-1 -i Pictures/Wallpapers/rosepineblack.png 
-        # Source a file (multi-file configs)
-        # source = ~/.config/hypr/myColors.conf
+            follow_mouse = "1";
 
-        # Some default env vars.
-        env = XCURSOR_SIZE,24
+            touchpad = {
+                natural_scroll = "no";
+            };
 
-        # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
-        input {
-            kb_layout = us
-            kb_variant =
-            kb_model =
-            kb_options =
-            kb_rules =
+            sensitivity = "0";
+        };
 
-            follow_mouse = 1
+        general = {
+            gaps_in = "5";
+            gaps_out = "20";
+            border_size = "2";
+            "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+            "col.inactive_border" = "rgba(595959aa)";
 
-            touchpad {
-                natural_scroll = no
-            }
+            layout = "dwindle";
 
-            sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
-        }
+            allow_tearing = "false";
+        };
 
-        general {
-            # See https://wiki.hyprland.org/Configuring/Variables/ for more
-
-            gaps_in = 5
-            gaps_out = 20
-            border_size = 2
-            col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
-            col.inactive_border = rgba(595959aa)
-
-            layout = dwindle
-
-            # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
-            allow_tearing = false
-        }
-
-        decoration {
-            # See https://wiki.hyprland.org/Configuring/Variables/ for more
-
-        #    rounding = 10
+        decoration = {
             
-            blur {
-                enabled = true
-                size = 3
-                passes = 1
-            }
+            blur = {
+                enabled = "true";
+                size = "3";
+                passes = "1";
+            };
 
-            drop_shadow = yes
-            shadow_range = 4
-            shadow_render_power = 3
-            col.shadow = rgba(1a1a1aee)
-        }
+            drop_shadow = "yes";
+            shadow_range = "4";
+            shadow_render_power = "3";
+            "col.shadow" = "rgba(1a1a1aee)";
+        };
 
-        animations {
-            enabled = yes
+        animations = {
+            enabled = "yes";
 
-            # Some default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
+            bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
 
-            bezier = myBezier, 0.05, 0.9, 0.1, 1.05
+            animation = [
+                "windows, 1, 7, myBezier"
+                "windowsOut, 1, 7, default, popin 80%"
+                "border, 1, 10, default"
+                "borderangle, 1, 8, default"
+                "fade, 1, 7, default"
+                "workspaces, 1, 6, default"
+            ];
+        };
 
-            animation = windows, 1, 7, myBezier
-            animation = windowsOut, 1, 7, default, popin 80%
-            animation = border, 1, 10, default
-            animation = borderangle, 1, 8, default
-            animation = fade, 1, 7, default
-            animation = workspaces, 1, 6, default
-        }
+        dwindle = {
+            pseudotile = "yes";
+            preserve_split = "yes";
+        };
 
-        dwindle {
-            # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
-            pseudotile = yes # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-            preserve_split = yes # you probably want this
-        }
+        master = {
+            new_is_master = "true";
+        };
 
-        master {
-            # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-            new_is_master = true
-        }
-
-        gestures {
-            # See https://wiki.hyprland.org/Configuring/Variables/ for more
-            workspace_swipe = off
-        }
-
-        misc {
-            # See https://wiki.hyprland.org/Configuring/Variables/ for more
-            #force_default_wallpaper = -1 # Set to 0 to disable the anime mascot wallpapers
-        }
-
-        # Example per-device config
-        # See https://wiki.hyprland.org/Configuring/Keywords/#executing for more
-        #device:epic-mouse-v1 {
-        #    sensitivity = -0.5
-        #}
-
-        # Example windowrule v1
-        # windowrule = float, ^(kitty)$
-        # Example windowrule v2
-        # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
-        # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
-
-
-        # See https://wiki.hyprland.org/Configuring/Keywords/ for more
-        $mainMod = SUPER
+        gestures = {
+            workspace_swipe = "off";
+        };
 
         # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-        bind = $mainMod, RETURN, exec, kitty
-        bind = SUPER_SHIFT,Q, killactive, 
-        bind = $mainMod, M, exit, 
-        bind = $mainMod, E, exec, dolphin
-        bind = $mainMod, V, togglefloating, 
-        bind = $mainMod, R, exec, wofi --show drun
-        bind = $mainMod, P, pseudo, # dwindle
-        bind = $mainMod, J, togglesplit, # dwindle
-        bind = $mainMod, F2, exec, firefox
-        bind = $mainMod, D, exec, wofi --show=drun
-        bind = $mainMod, F3, exec, pcmanfm
+        bind = [
+            "${Mod}, RETURN, exec, foot"
+            "${Modshift},Q, killactive,"
+            "${Mod}, M, exit,"
+            "${Mod}, E, exec, dolphin"
+            "${Mod}, V, togglefloating,"
+            "${Mod}, R, exec, wofi --show drun"
+            "${Mod}, P, pseudo,"
+            "${Mod}, J, togglesplit,"
+            "${Mod}, F2, exec, firefox"
+            "${Mod}, D, exec, wofi --show=drun"
+            "${Mod}, F3, exec, pcmanfm"
+            ",Print, exec, bloomshot"
+            "${Mod}, PRINT, exec, bloomshot window"
+            "${Modshift}, PRINT, exec, bloomshot area"
 
-        bind =, Print, exec, ~/.dotfiles/scripts/screenshot.sh
-        # Screenshot of focused window
-        bind = $mainMod, PRINT, exec, ~/.dotfiles/scripts/screenshot.sh window
-        # Screenshot of area
-        bind = SUPER_SHIFT, PRINT, exec, ~/.dotfiles/scripts/screenshot.sh area
+            "${Mod}, left, movefocus, l"
+            "${Mod}, right, movefocus, r"
+            "${Mod}, up, movefocus, u"
+            "${Mod}, down, movefocus, d"
 
-        # Move focus with mainMod + arrow keys
-        bind = $mainMod, left, movefocus, l
-        bind = $mainMod, right, movefocus, r
-        bind = $mainMod, up, movefocus, u
-        bind = $mainMod, down, movefocus, d
+            "${Mod}, 1, workspace, 1"
+            "${Mod}, 2, workspace, 2"
+            "${Mod}, 3, workspace, 3"
+            "${Mod}, 4, workspace, 4"
+            "${Mod}, 5, workspace, 5"
+            "${Mod}, 6, workspace, 6"
+            "${Mod}, 7, workspace, 7"
+            "${Mod}, 8, workspace, 8"
+            "${Mod}, 9, workspace, 9"
+            "${Mod}, 0, workspace, 10"
 
-        # Switch workspaces with mainMod + [0-9]
-        bind = $mainMod, 1, workspace, 1
-        bind = $mainMod, 2, workspace, 2
-        bind = $mainMod, 3, workspace, 3
-        bind = $mainMod, 4, workspace, 4
-        bind = $mainMod, 5, workspace, 5
-        bind = $mainMod, 6, workspace, 6
-        bind = $mainMod, 7, workspace, 7
-        bind = $mainMod, 8, workspace, 8
-        bind = $mainMod, 9, workspace, 9
-        bind = $mainMod, 0, workspace, 10
+            "${Mod} SHIFT, 1, movetoworkspace, 1"
+            "${Mod} SHIFT, 2, movetoworkspace, 2"
+            "${Mod} SHIFT, 3, movetoworkspace, 3"
+            "${Mod} SHIFT, 4, movetoworkspace, 4"
+            "${Mod} SHIFT, 5, movetoworkspace, 5"
+            "${Mod} SHIFT, 6, movetoworkspace, 6"
+            "${Mod} SHIFT, 7, movetoworkspace, 7"
+            "${Mod} SHIFT, 8, movetoworkspace, 8"
+            "${Mod} SHIFT, 9, movetoworkspace, 9"
+            "${Mod} SHIFT, 0, movetoworkspace, 10"
 
-        # Move active window to a workspace with mainMod + SHIFT + [0-9]
-        bind = $mainMod SHIFT, 1, movetoworkspace, 1
-        bind = $mainMod SHIFT, 2, movetoworkspace, 2
-        bind = $mainMod SHIFT, 3, movetoworkspace, 3
-        bind = $mainMod SHIFT, 4, movetoworkspace, 4
-        bind = $mainMod SHIFT, 5, movetoworkspace, 5
-        bind = $mainMod SHIFT, 6, movetoworkspace, 6
-        bind = $mainMod SHIFT, 7, movetoworkspace, 7
-        bind = $mainMod SHIFT, 8, movetoworkspace, 8
-        bind = $mainMod SHIFT, 9, movetoworkspace, 9
-        bind = $mainMod SHIFT, 0, movetoworkspace, 10
+            "${Mod}, S, togglespecialworkspace, magic"
+            "${Mod} SHIFT, S, movetoworkspace, special:magic"
 
-        # Example special workspace (scratchpad)
-        bind = $mainMod, S, togglespecialworkspace, magic
-        bind = $mainMod SHIFT, S, movetoworkspace, special:magic
+            "${Mod}, mouse_down, workspace, e+1"
+            "${Mod}, mouse_up, workspace, e-1"
+        ];
 
-        # Scroll through existing workspaces with mainMod + scroll
-        bind = $mainMod, mouse_down, workspace, e+1
-        bind = $mainMod, mouse_up, workspace, e-1
+        bindm = [
+            "${Mod}, mouse:272, movewindow"
+            "${Mod}, mouse:273, resizewindow"
+        ];
 
-        # Move/resize windows th mainMod + LMB/RMB and dragging
-        bindm = $mainMod, mouse:272, movewindow
-        bindm = $mainMod, mouse:273, resizewindow
-
-        workspace=1,monitor:DP-1
-        workspace=2,monitor:DP-1
-        workspace=3,monitor:DP-1
-        workspace=4,monitor:DP-1
-        workspace=5,monitor:HDMI-A-1
-        workspace=6,monitor:HDMI-A-1
-        workspace=7,monitor:HDMI-A-1
-        workspace=8,monitor:HDMI-A-1
-
-
+        workspace = [
+            "1,monitor:DP-1"
+            "2,monitor:DP-1"
+            "3,monitor:DP-1"
+            "4,monitor:DP-1"
+            "5,monitor:HDMI-A-1"
+            "6,monitor:HDMI-A-1"
+            "7,monitor:HDMI-A-1"
+            "8,monitor:HDMI-A-1"
+        ];
     };
   };
 }

@@ -3,18 +3,36 @@
 pkgs.writeShellScriptBin "rosebloom-rebuild" 
 ''
 if [ "$1" == "system" ]; then
-    if [ "$(id -u)" -ne 0 ]; then
-        echo "Error: This operation requires root privileges. Please run the script with sudo."
-        exit 1
-    fi
+   if [ "$2" == "-l" ]; then  # Check for the "-l" flag
+        if [ "$(id -u)" -ne 0 ]; then
+            echo "Error: This operation requires root privileges. Please run the script with sudo."
+            exit 1
+        fi
 
-    nixos-rebuild switch --flake git+https://github.com/RoseHobgoblin/RosebloomOS#$HOSTNAME
+        echo "Performing System Rebuild using local repository."
+        nixos-rebuild switch --flake ~/RosebloomOS#$HOSTNAME
+   else  # Default behavior if no "-l" flag
+        if [ "$(id -u)" -ne 0 ]; then
+            echo "Error: This operation requires root privileges. Please run the script with sudo."
+            exit 1
+        fi
 
-    elif [ "$1" == "home" ]; then
-    echo "Performing Home Rebuild"
-    home-manager switch --flake git+https://github.com/RoseHobgoblin/RosebloomOS#rosa
+        echo "Performing System Rebuild using github repository." 
+        nixos-rebuild switch --flake git+https://github.com/RoseHobgoblin/RosebloomOS#$HOSTNAME
+   fi
+
+elif [ "$1" == "home" ]; then
+   if [ "$2" == "-l" ]; then  # Check for the "-l" flag
+       echo "Performing Home Rebuild using local repository" 
+       home-manager switch --flake ~/RosebloomOS#$USER
+   else
+       echo "Performing Home Rebuild ng github repository."
+       home-manager switch --flake git+https://github.com/RoseHobgoblin/RosebloomOS#$USER
+   fi
+
 else
-    echo "Usage: $0 <system|home>"
-    exit 1
+   echo "Usage: $0 <system|home> [-l]" # Indicate optional "-l" for home
+   exit 1
 fi
+
 ''

@@ -7,14 +7,12 @@ let
 in
 
 {
-  imports = [
-    #/etc/nixos/hardware-configuration.nix
-    #./bloomutils.nix
-  ];
 
-  environment.etc."machine-id".source = "/nix/persist/etc/machine-id";
-  environment.etc."NetworkManager/system-connections".source = "/nix/persist/etc/NetworkManager/system-connections";
-
+  environment.etc = {
+    "machine-id".source = "/nix/persist/etc/machine-id";
+    "NetworkManager/system-connections".source = "/nix/persist/etc/NetworkManager/system-connections";
+  };
+  
   nixpkgs.config.allowUnfree = true;
   nix = {
     settings = {

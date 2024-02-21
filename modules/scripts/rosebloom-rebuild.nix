@@ -10,7 +10,7 @@ if [ "$1" == "system" ]; then
         fi
 
         echo "Performing System Rebuild using local repository."
-        nixos-rebuild switch --flake ~/RosebloomOS#$HOSTNAME
+        nixos-rebuild switch --flake /home/rosa/RosebloomOS#$HOSTNAME
    else  # Default behavior if no "-l" flag
         if [ "$(id -u)" -ne 0 ]; then
             echo "Error: This operation requires root privileges. Please run the script with sudo."

@@ -27,13 +27,11 @@ in
   };
 
   fonts.packages = with pkgs; [
-  noto-fonts
-  noto-fonts-cjk
-  noto-fonts-emoji
-  terminus-nerdfont
-  
-];
-
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    terminus-nerdfont
+  ];
   
   environment.systemPackages = with pkgs; [
     home-manager

@@ -32,6 +32,7 @@ in
     noto-fonts-emoji
     terminus-nerdfont
   ];
+
   
   environment.systemPackages = with pkgs; [
     home-manager

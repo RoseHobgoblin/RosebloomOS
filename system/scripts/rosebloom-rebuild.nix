@@ -8,7 +8,7 @@ if [ "$1" == "system" ]; then
         exit 1
     fi
 
-    nixos-rebuild switch --flake git+https://github.com/RoseHobgoblin/RosebloomOS#rosebloomos --impure
+    nixos-rebuild switch --flake git+https://github.com/RoseHobgoblin/RosebloomOS#$hostname
 
     elif [ "$1" == "home" ]; then
     echo "Performing Home Rebuild"

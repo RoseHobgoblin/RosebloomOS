@@ -1,6 +1,9 @@
 { config, lib, inputs, ...}:
 
 {
-    imports = [ ../../system/config.nix ];
-    networking.hostName = "hortus";
+    imports = [ 
+    ./hardware-configuration.nix
+    ../../system/config.nix 
+    ];
+    networking.hostName = "silva";
 }

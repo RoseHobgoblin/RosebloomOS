@@ -38,7 +38,7 @@
     homeConfigurations."rosa" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = { inherit inputs; };
-      modules = [ ./home/home.nix ];
+      modules = [ ./home-manager/home.nix ];
     };
   };
 }

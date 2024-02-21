@@ -1,7 +1,8 @@
 { pkgs, ... }: {
   imports = [
 #    ./firefox.nix
-    ./foot.nix
+    ./modules/foot.nix
+    #./modules/hyprland.nix
 #    ./git.nix 
 #    ./starship.nix
 #    ./tmux.nix

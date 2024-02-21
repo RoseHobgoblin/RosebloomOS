@@ -9,7 +9,7 @@ in
 {
   imports = [
     #/etc/nixos/hardware-configuration.nix
-    ./bloomutils.nix
+    #./bloomutils.nix
   ];
 
   environment.etc."machine-id".source = "/nix/persist/etc/machine-id";

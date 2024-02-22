@@ -1,9 +1,9 @@
 { inputs, config, pkgs, nixpkgs, ... }: {
   imports = [
 #    ./firefox.nix
- #   ./foot
- #   ./hyprland
-#    ./waybar
+     ./foot
+     ./hyprland
+     ./waybar
 #    ./git.nix 
 #    ./starship.nix
 #    ./tmux.nix
@@ -11,11 +11,8 @@
   ];
   
 
-  home = {
-    #username = "rosa";
-    #homeDirectory = "/home/rosa";
     #_module.args.theme = import ../theme;
-    packages = with pkgs; [
+    home.packages = with pkgs; [
       wl-clipboard
       firefox 
       wofi 
@@ -29,7 +26,7 @@
       gimp
       audacity
     ];
-  };
+
 
 #  programs.home-manager.enable = true;
  # home.stateVersion = "24.05";

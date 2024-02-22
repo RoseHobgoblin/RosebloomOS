@@ -1,5 +1,10 @@
 { inputs, config, ... }:
 {
+
+  home = {
+    username = "rosa";
+    homeDirectory = "/home/rosa";
+  };
   imports = [
     ./packages.nix
   ];

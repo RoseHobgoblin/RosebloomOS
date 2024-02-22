@@ -1,4 +1,4 @@
- let
+let
     Mod = "SUPER";
     Modshift = "${Mod}SHIFT";
 in {

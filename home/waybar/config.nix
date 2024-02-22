@@ -1,0 +1,10 @@
+{
+  xdg.configFile."waybar/style.css".text = import ./style.nix {inherit theme;};
+  programs.waybar = {
+    enable = true;
+    package = pkgs.waybar;
+    settings = {
+      
+    };
+  };
+}

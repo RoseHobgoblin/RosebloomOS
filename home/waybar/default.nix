@@ -1,8 +1,8 @@
 {
-  xdg.configFile."waybar/style.css".text = import ./style.nix {inherit theme;};
+  #import = [ ./style.nix ];
   programs.waybar = {
     enable = true;
-    package = pkgs.waybar;
+    #package = pkgs.waybar;
     settings = {
       
     };

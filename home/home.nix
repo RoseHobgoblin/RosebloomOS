@@ -14,11 +14,10 @@
   home = {
     username = "rosa";
     homeDirectory = "/home/rosa";
-    #_module.args.theme = import ../theme;
+    _module.args.theme = import ../theme;
     packages = with pkgs; [
       wl-clipboard
       firefox 
-      waybar 
       wofi 
       vscodium 
       git 

@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       main = {
-	    font = "Terminess Nerd Font Mono:size=15";
+	    font = "M+1Code Nerd Font Mono:size=15";
       	underline-offset = 1;
       	underline-thickness = 1;
 	      box-drawings-uses-font-glyphs = true;      	

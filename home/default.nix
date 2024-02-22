@@ -1,6 +1,7 @@
 { inputs, config, ... }:
 {
 
+  _module.args.theme = import ../theme;
   home = {
     username = "rosa";
     homeDirectory = "/home/rosa";

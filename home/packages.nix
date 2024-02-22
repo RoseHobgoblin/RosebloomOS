@@ -11,7 +11,6 @@
   ];
   
 
-    #_module.args.theme = import ../theme;
     home.packages = with pkgs; [
       wl-clipboard
       firefox 

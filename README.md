@@ -6,7 +6,7 @@
 
 Not an actual OS, but it tries to be...
 
-My NixOS flake. While I wouldn't generally recommend anyone else tries to use this (it's heavily tailored to my needs!), they might provide interesting ideas or inspiration.
+My NixOS flake. While I wouldn't generally recommend anyone else tries to use this, it might provide interesting ideas or inspiration. This repository is mainly for me to sync my flake across devices. 
 
 Features <ul>
 <li>Custom Utilities: A handful of my personal utilities for specific tasks, like rebuilding NixOS/home-manager or taking screenshots.</li>

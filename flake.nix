@@ -2,7 +2,7 @@
   description = "High-grade modified NixOS.";
 
   inputs = {
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -38,7 +38,7 @@
     homeConfigurations."rosa" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = { inherit inputs; };
-      modules = [ ./home/home.nix ];
+      modules = [ ./home ];
     };
   };
 }

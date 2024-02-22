@@ -1,8 +1,8 @@
-{ pkgs, ... }: {
+{ inputs, config, pkgs, nixpkgs, ... }: {
   imports = [
 #    ./firefox.nix
-    ./foot
-    ./hyprland
+ #   ./foot
+ #   ./hyprland
 #    ./waybar
 #    ./git.nix 
 #    ./starship.nix
@@ -12,9 +12,9 @@
   
 
   home = {
-    username = "rosa";
-    homeDirectory = "/home/rosa";
-    _module.args.theme = import ../theme;
+    #username = "rosa";
+    #homeDirectory = "/home/rosa";
+    #_module.args.theme = import ../theme;
     packages = with pkgs; [
       wl-clipboard
       firefox 
@@ -27,11 +27,10 @@
       swaybg
       viewnior
       gimp
-      font-manager
       audacity
     ];
   };
 
-  programs.home-manager.enable = true;
-  home.stateVersion = "24.05";
+#  programs.home-manager.enable = true;
+ # home.stateVersion = "24.05";
 }

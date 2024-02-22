@@ -14,5 +14,6 @@ Features <ul>
 
 Important Notes  <ul>
 <li>Designed for Me: This is entirely tailored to my devices and practices; you won't be able to use this at all.</li>
-<li>Use at Your Own Risk: If you do decide to use this, there are zero guarantees about stability or usability.</li>
+<li>Use at Your Own Risk: If you do decide to use this, you probably won't be able to log in.</li>
+<li>Fine. If you REALLY want to use this, clone it and edit anything referencing my username and hostname.</li>
 </ul>

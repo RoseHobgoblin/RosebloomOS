@@ -3,7 +3,7 @@
 #    ./firefox.nix
     ./foot
     ./hyprland
-    ./waybar
+#    ./waybar
 #    ./git.nix 
 #    ./starship.nix
 #    ./tmux.nix
@@ -28,6 +28,7 @@
       viewnior
       gimp
       font-manager
+      audacity
     ];
   };
 

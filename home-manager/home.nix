@@ -25,6 +25,7 @@
       swaybg
       viewnior
       gimp
+      font-manager
     ];
   };
 

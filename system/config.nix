@@ -29,6 +29,7 @@ in
     noto-fonts-cjk
     noto-fonts-emoji
     terminus-nerdfont
+    nerdfonts
   ];
 
   

@@ -1,17 +1,20 @@
 { pkgs, ... }: {
   imports = [
 #    ./firefox.nix
-    ./modules/foot.nix
-    ./modules/hyprland.nix
+    ./foot
+    ./hyprland
+    ./waybar
 #    ./git.nix 
 #    ./starship.nix
 #    ./tmux.nix
 #    ./zsh.nix
   ];
+  
 
   home = {
     username = "rosa";
     homeDirectory = "/home/rosa";
+    #_module.args.theme = import ../theme;
     packages = with pkgs; [
       wl-clipboard
       firefox 

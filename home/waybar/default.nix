@@ -7,10 +7,10 @@
 }:
 {
   #import = [ ./style.nix ];
-  xdg.configFile."waybar/style.css".text = import "./style.nix";
+  xdg.configFile."waybar/style.css".text = pkgs.lib.readFile ./style.nix;
   programs.waybar = {
     enable = true;
-    #package = pkgs.waybar;
+    package = pkgs.waybar;
     #settings = {
     #};
   };

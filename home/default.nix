@@ -8,6 +8,11 @@
   };
   imports = [
     ./packages.nix
+     ./foot
+     ./hyprland
+     ./waybar
+     ./gtk
   ];
   home.stateVersion = "24.05";
+  programs.home-manager.enable = true;
 }

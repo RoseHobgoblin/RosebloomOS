@@ -2,21 +2,21 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Frappe-Compact-Pink-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = ["pink"];
-        tweaks = ["rimless"];
-        size = "compact";
-        variant = "frappe";
+      name = "rose-pine-gtk";
+      package = pkgs.rose-pine-gtk-theme.override {
+        #accents = ["pink"];
+        #tweaks = ["rimless"];
+        #size = "compact";
+        #variant = "frappe";
       };
     };
 
     iconTheme = {
-      package = pkgs.catppuccin-papirus-folders;
+      package = pkgs.rose-pine-icon-theme;
       name = "Papirus";
     };
     font = {
-      name = "Lexend";
+      name = "M+1 Nerd Font";
       size = 11;
     };
     gtk3.extraConfig = {

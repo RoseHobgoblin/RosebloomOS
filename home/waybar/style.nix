@@ -8,7 +8,7 @@
 in
   with theme.colors; ''
     * {
-      font-family: "M+2 Nerd Font";
+      font-family: "M+1 Nerd Font";
     }
 
   ''

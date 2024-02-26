@@ -22,7 +22,7 @@
         "hyprland/workspaces"
        ];
       "modules-center" = [];
-      "modules-right" = [ "wireplumber" ];
+      "modules-right" = [ "wireplumber" "clock" ];
       "line-size" = 4;
 
       };
@@ -52,6 +52,11 @@
         "format-muted" = "";
         "max-volume" = "150";
         "scroll-step" = "0.2";
+      };
+      "clock" = {
+        "format" = "%H:%M:%S";
+        "tooltip-format" = "%A, %d %B %Y %H:%M:%S";
+        "interval" = 1;
       };
     };
   };

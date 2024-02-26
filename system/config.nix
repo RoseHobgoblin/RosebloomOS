@@ -41,7 +41,7 @@ in
     libnotify
     rosebloom-rebuild
     bloomshot
-    cava
+    (firefox.override { extraNativeMessagingHosts = [ inputs.pipewire-screenaudio.packages.${pkgs.system}.default ]; })
   ];
 
   users.users = {

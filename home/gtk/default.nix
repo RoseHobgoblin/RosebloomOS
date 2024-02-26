@@ -1,38 +1,14 @@
 {pkgs, ...}: {
   gtk = {
     enable = true;
-    theme = {
-      name = "rose-pine-gtk";
-      package = pkgs.rose-pine-gtk-theme.override {
-        #accents = ["pink"];
-        #tweaks = ["rimless"];
-        #size = "compact";
-        #variant = "frappe";
-      };
-    };
-
-    iconTheme = {
-      package = pkgs.rose-pine-icon-theme;
-      name = "Papirus";
-    };
-    font = {
-      name = "M+1 Nerd Font";
-      size = 11;
-    };
-    gtk3.extraConfig = {
-      gtk-xft-antialias = 1;
-      gtk-xft-hinting = 1;
-      gtk-xft-hintstyle = "hintslight";
-      gtk-xft-rgba = "rgb";
-      gtk-application-prefer-dark-theme = 1;
-    };
-    gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;
-    gtk2.extraConfig = ''
-      gtk-xft-antialias=1
-      gtk-xft-hinting=1
-      gtk-xft-hintstyle="hintslight"
-      gtk-xft-rgba="rgb"
-    '';
+    theme.name = "rose-pine";
+    theme.package = pkgs.rose-pine-gtk-theme;
+    cursorTheme.name = "Catppuccin-Macchiato-Dark";
+    cursorTheme.package = pkgs.catppuccin-cursors.macchiatoDark;
+    iconTheme.name = "rose-pine";
+    iconTheme.package = pkgs.rose-pine-icon-theme;
+    font.name = "source-code-pro";
+    font.package = (pkgs.nerdfonts.override { fonts = [ "SourceCodePro" ]; });
   };
 
   home = {

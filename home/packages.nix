@@ -16,5 +16,11 @@
     mpv
     qbittorrent
     gnumake
+    htop
+    mkvtoolnix
+    xwaylandvideobridge
+    discord
+discord-screenaudio
+
   ];
 }

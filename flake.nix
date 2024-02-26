@@ -1,5 +1,5 @@
 {
-  description = "High-grade modified NixOS.";
+  description = "A floral derivation of NixOS.";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -10,9 +10,11 @@
     };
 
     hyprland.url = "github:hyprwm/Hyprland";
+
+    pipewire-screenaudio.url = "github:IceDBorn/pipewire-screenaudio";
   };
 
-  outputs = { nixpkgs, home-manager, ... } @ inputs: 
+  outputs = { nixpkgs, home-manager, pipewire-screenaudio, ... } @ inputs: 
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
@@ -20,11 +22,6 @@
       config.allowUnfree = true;
     };
   in {
-    #nixosConfigurations."rosebloomos" = nixpkgs.lib.nixosSystem {
-    #  specialArgs = { inherit inputs system; };
-    #  modules = [ ./system/config.nix ];
-    #};
-
     nixosConfigurations."hortus" = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs system; };
       modules = [ ./hosts/hortus/host.nix ];
@@ -34,6 +31,7 @@
       specialArgs = { inherit inputs system; };
       modules = [ ./hosts/silva/host.nix ];
     };
+
 
     homeConfigurations."rosa" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;

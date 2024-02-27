@@ -14,6 +14,7 @@ in
   };
   
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnsupportedSystem = true;
   nix = {
     settings = {
       experimental-features = "nix-command flakes";
@@ -24,13 +25,20 @@ in
     };
   };
 
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    terminus-nerdfont
-    nerdfonts
-  ];
+  fonts = {
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+      terminus-nerdfont
+      nerdfonts
+    ];
+    fontconfig = {
+    defaultFonts = {
+      serif = [ "M+1 Nerd Font" ];
+    };
+  };
 
   
   environment.systemPackages = with pkgs; [
@@ -41,7 +49,7 @@ in
     libnotify
     rosebloom-rebuild
     bloomshot
-    (firefox.override { extraNativeMessagingHosts = [ inputs.pipewire-screenaudio.packages.${pkgs.system}.default ]; })
+    libreoffice
   ];
 
   users.users = {
@@ -54,7 +62,6 @@ in
   };
 
   networking.networkmanager.enable = true;
-
 
 
   security.rtkit.enable = true;

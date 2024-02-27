@@ -12,18 +12,17 @@
     package = pkgs.waybar;
     settings = {
       "bar" = {
-      "name" = "Yuri"; 
-      "fixed-center" = true;
-      "reload_style_on_change" = true;
-      "height" = 15;
-      "width" = 1920;
-      "output" = "DP-1";
-      "modules-left" = [ 
-        "hyprland/workspaces"
-       ];
-      "modules-center" = [];
-      "modules-right" = [ "wireplumber" "clock" ];
-      "line-size" = 4;
+        "name" = "Yuri"; 
+        "fixed-center" = true;
+        "reload_style_on_change" = true;
+        "height" = 15;
+        "width" = 1920;
+        "modules-left" = [ 
+          "hyprland/workspaces"
+        ];
+        "modules-center" = [];
+        "modules-right" = [ "wireplumber" "clock" ];
+        "line-size" = 4;
 
       };
       "bar2" = {  # Add a second bar named "Yurii"

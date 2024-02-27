@@ -18,9 +18,7 @@
     gnumake
     htop
     mkvtoolnix
-    xwaylandvideobridge
-    discord
-discord-screenaudio
-
+    xarchiver
+    steam-run
   ];
 }

@@ -10,11 +10,9 @@
     };
 
     hyprland.url = "github:hyprwm/Hyprland";
-
-    pipewire-screenaudio.url = "github:IceDBorn/pipewire-screenaudio";
   };
 
-  outputs = { nixpkgs, home-manager, pipewire-screenaudio, ... } @ inputs: 
+  outputs = { nixpkgs, home-manager, ... } @ inputs: 
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {

@@ -20,5 +20,6 @@
     mkvtoolnix
     xarchiver
     steam-run
+	gh
   ];
 }

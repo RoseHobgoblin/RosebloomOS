@@ -35,11 +35,11 @@ in
       nerdfonts
     ];
     fontconfig = {
-    defaultFonts = {
-      serif = [ "M+1 Nerd Font" ];
+      defaultFonts = {
+        serif = [ "M+1 Nerd Font" ];
+      };
     };
   };
-
   
   environment.systemPackages = with pkgs; [
     home-manager
@@ -83,7 +83,7 @@ in
 
   security.polkit.enable = true;
    i18n.defaultLocale = "en_US.UTF-8";
-boot.initrd.kernelModules = [ "amdgpu" ];
+  boot.initrd.kernelModules = [ "amdgpu" ];
 
 
 

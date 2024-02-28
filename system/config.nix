@@ -34,10 +34,6 @@ in
       terminus-nerdfont
       nerdfonts
     ];
-    fontconfig = {
-    defaultFonts = {
-      serif = [ "M+1 Nerd Font" ];
-    };
   };
 
   

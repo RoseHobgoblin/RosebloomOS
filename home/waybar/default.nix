@@ -25,19 +25,6 @@
         "line-size" = 4;
 
       };
-      "bar2" = {  # Add a second bar named "Yurii"
-        "name" = "Yurii";
-        "height" = 30;
-        "width" = 1920;
-        "output" = "HDMI-A-0";
-        "modules-left" = [
-           "hyprland/workspaces"
-        ];
-        "modules-center" = [];
-        "modules-right" = [
-        ];
-        "line-size" = 4;
-      };
 
 
       "hyprland/workspaces"= {

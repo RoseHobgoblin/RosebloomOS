@@ -7,7 +7,7 @@ in {
     enable = true;
 
     settings = {
-        monitor=",preferred,auto,auto";
+        monitor=", preferred, auto, 1";
 
         exec-once = [
             "waybar"

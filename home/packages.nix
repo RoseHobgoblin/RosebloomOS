@@ -19,5 +19,7 @@
     htop
     mkvtoolnix
     xarchiver
+    steam-run
+    gh
   ];
 }

@@ -12,6 +12,7 @@ in {
         exec-once = [
             "waybar"
             "swaybg -o DP-1 -i Pictures/Wallpapers/result1.png -o HDMI-A-1 -i Pictures/Wallpapers/rosepineblack.png"
+            "fcitx5"
         ];
 
         env = "XCURSOR_SIZE,24";

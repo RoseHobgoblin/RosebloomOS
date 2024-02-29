@@ -70,19 +70,38 @@ in
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.kernelModules = [ "amdgpu" ];
-  boot.initrd.verbose = false;
-  boot.consoleLogLevel = 0;
-  boot.kernelParams = [ "quiet" "udev.log_level=0" ]; 
-  boot.plymouth.enable = true;
-  boot.plymouth.theme = "bgrt"; 
+  #boot.initrd.verbose = false;
+  #boot.consoleLogLevel = 0;
+  #boot.kernelParams = [ "quiet" "udev.log_level=0" ]; 
+  #boot.plymouth.enable = true;
+  #boot.plymouth.theme = "bgrt"; 
   
   time.timeZone = "Pacific/Auckland";
 
   security.rtkit.enable = true;
   security.polkit.enable = true;
    
-  i18n.defaultLocale = "en_US.UTF-8";
 
+  i18n.defaultLocale = "en_US.UTF-8";
+  i18n = {
+    inputMethod = {
+      enabled = "fcitx5";
+      fcitx5.addons = with pkgs; [
+        fcitx5-mozc
+        fcitx5-gtk
+      ];
+    };
+  };
+  services.xserver.desktopManager.runXdgAutoStartIfNone = true;
+
+      extraSessionCommands = ''
+      export INPUT_METHOD=fcitx
+      export QT_IM_MODULE=fcitx
+      export GTK_IM_MODULE=fcitx
+      export XMODIFIERS=@im=fcitx
+      export XIM_SERVERS=fcitx
+      ''
+      
   programs.hyprland = {	
     enable = true;
     xwayland.enable = true;
@@ -102,7 +121,7 @@ in
 
   system = {
     nixos = {
-      DistroName = lib.mkForce "RosebloomOS";
+      distroName = lib.mkForce "RosebloomOS";
       distroId = lib.mkForce "rosebloomos";
     };
     stateVersion = "24.05";

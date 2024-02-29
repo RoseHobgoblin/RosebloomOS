@@ -66,8 +66,15 @@ in
 
   networking.networkmanager.enable = true;
 
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.initrd.kernelModules = [ "amdgpu" ];
+  boot.initrd.verbose = false;
+  boot.consoleLogLevel = 0;
+  boot.kernelParams = [ "quiet" "udev.log_level=0" ]; 
+  boot.plymouth.enable = true;
+  boot.plymouth.theme = "bgrt"; 
   
   time.timeZone = "Pacific/Auckland";
 
@@ -75,8 +82,6 @@ in
   security.polkit.enable = true;
    
   i18n.defaultLocale = "en_US.UTF-8";
-
-  boot.initrd.kernelModules = [ "amdgpu" ];
 
   programs.hyprland = {	
     enable = true;

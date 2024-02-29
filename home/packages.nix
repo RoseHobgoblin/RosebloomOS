@@ -21,5 +21,6 @@
     xarchiver
     steam-run
     gh
+    palemoon-bin
   ];
 }

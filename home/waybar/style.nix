@@ -6,9 +6,16 @@
   };
   inherit (theme) x;
 in
-  with theme.colors; ''
-    * {
-      font-family: "M+1 Nerd Font";
+  with theme.colors; 
+  ''
+  * {
+    font-family: "M+1 Nerd Font";
+    border: none;
+    border-radius: 0;
+
+    }
+    window#waybar {
+        margin-top: 5px;  
     }
 
   ''

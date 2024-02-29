@@ -52,19 +52,42 @@ in
     libreoffice
   ];
 
-  users.users = {
-    root.initialPassword = "hyperborea";
-    rosa = {
-      isNormalUser = true;
-      extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-      initialPassword = "hyperborea";
+  users = {
+    mutableUsers = false;
+    users = {
+      root.initialPassword = "hyperborea";
+      rosa = {
+        isNormalUser = true;
+        extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+        initialPassword = "hyperborea";
+      };
     };
   };
 
   networking.networkmanager.enable = true;
 
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  
+  time.timeZone = "Pacific/Auckland";
 
   security.rtkit.enable = true;
+  security.polkit.enable = true;
+   
+  i18n.defaultLocale = "en_US.UTF-8";
+
+  boot.initrd.kernelModules = [ "amdgpu" ];
+
+  programs.hyprland = {	
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  hardware.bluetooth.enable = true; 
+  hardware.bluetooth.powerOnBoot = true; 
+  services.blueman.enable = true;
+
+  services.openssh.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -72,45 +95,12 @@ in
     pulse.enable = true;
   };
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  
-  time.timeZone = "Pacific/Auckland";
-
-  hardware.bluetooth.enable = true; 
-  hardware.bluetooth.powerOnBoot = true; 
-  services.blueman.enable = true;
-
-  security.polkit.enable = true;
-   i18n.defaultLocale = "en_US.UTF-8";
-  boot.initrd.kernelModules = [ "amdgpu" ];
-
-
-
-services.xserver = {
-	xkb.layout = "us";
-	enable = true;
-	videoDrivers = [ "amdgpu" ];
-};
-  users.mutableUsers = false;
-
-
-
-
-
-
-programs.hyprland = {	
-	enable = true;
-	xwayland.enable = true;
-};
-services.openssh.enable = true;
-
-system = {
+  system = {
     nixos = {
-      distroName = lib.mkForce "RosebloomOS";
+      DistroName = lib.mkForce "RosebloomOS";
       distroId = lib.mkForce "rosebloomos";
     };
-    stateVersion = "24.05"; # Did you read the comment?
+    stateVersion = "24.05";
   };
 }
 

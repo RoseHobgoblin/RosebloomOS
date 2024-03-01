@@ -13,6 +13,11 @@ in {
             "waybar"
             "swaybg -o DP-1 -i Pictures/Wallpapers/result1.png -o HDMI-A-1 -i Pictures/Wallpapers/rosepineblack.png"
             "fcitx5"
+            "export INPUT_METHOD=fcitx"
+            "export QT_IM_MODULE=fcitx"
+            "export GTK_IM_MODULE=fcitx"
+            "export XMODIFIERS=@im=fcitx"
+            "export XIM_SERVERS=fcitx"
         ];
 
         env = "XCURSOR_SIZE,24";

@@ -17,10 +17,8 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   installPhase = ''
     runHook preInstall
 
-    for theme in rose-pine rose-pine-moon rose-pine-dawn; do
-      install -Dm644 $src/$theme/arrow.png $src/$theme/radio.png -t $out/share/fcitx5/themes/$theme 
-      install -Dm644 $src/$theme/theme.conf -t $out/share/fcitx5/themes/$theme
-    done
+    mkdir -pv $out/share/fcitx5/themes/
+    cp -rv rose-pine* $out/share/fcitx5/themes/
 
     runHook postInstall
 

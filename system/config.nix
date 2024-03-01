@@ -4,11 +4,9 @@
 let
     bloomshot = import ../modules/scripts/bloomshot.nix {inherit pkgs; };
     rosebloom-rebuild = import ../modules/scripts/rosebloom-rebuild.nix {inherit pkgs; };
-    fcitx5-rose-pine = import ../fcitx5-rose-pine/package.nix;
 in
 
 {
-
   environment.etc = {
     "machine-id".source = "/nix/persist/etc/machine-id";
     "NetworkManager/system-connections".source = "/nix/persist/etc/NetworkManager/system-connections";
@@ -91,7 +89,7 @@ in
       fcitx5.addons = with pkgs; [
         fcitx5-mozc
         fcitx5-gtk
-        fcitx5-rose-pine
+       (pkgs.callPackage ../fcitx5-rose-pine/package.nix {})
       ];
     };
   };

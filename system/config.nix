@@ -4,6 +4,7 @@
 let
     bloomshot = import ../modules/scripts/bloomshot.nix {inherit pkgs; };
     rosebloom-rebuild = import ../modules/scripts/rosebloom-rebuild.nix {inherit pkgs; };
+    fcitx5-rose-pine = import ../fcitx5-rose-pine/package.nix;
 in
 
 {
@@ -50,6 +51,7 @@ in
     rosebloom-rebuild
     bloomshot
     libreoffice
+    
   ];
 
   users = {
@@ -89,18 +91,10 @@ in
       fcitx5.addons = with pkgs; [
         fcitx5-mozc
         fcitx5-gtk
+        
       ];
     };
   };
-  services.xserver.desktopManager.runXdgAutoStartIfNone = true;
-
-      extraSessionCommands = ''
-      export INPUT_METHOD=fcitx
-      export QT_IM_MODULE=fcitx
-      export GTK_IM_MODULE=fcitx
-      export XMODIFIERS=@im=fcitx
-      export XIM_SERVERS=fcitx
-      ''
       
   programs.hyprland = {	
     enable = true;

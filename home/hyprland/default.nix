@@ -11,11 +11,14 @@ in {
 
         exec-once = [
             "waybar"
-            "swaybg -o DP-1 -i Pictures/Wallpapers/result1.png -o HDMI-A-1 -i Pictures/Wallpapers/rosepineblack.png"
+            "swaybg -o DP-1 -i Pictures/Wallpapers/RosebloomDef1.png -o HDMI-A-1 -i Pictures/Wallpapers/rosepineblack.png"
+            "swaybg -o eDP-1 -i Pictures/Wallpapers/RosebloomDef1.png"
+            "wl-paste --type text --watch cliphist store"
+            "wl-paste --type image --watch cliphist store"
             "fcitx5"
             "export INPUT_METHOD=fcitx"
             "export QT_IM_MODULE=fcitx"
-            "export GTK_IM_MODULE=fcitx"
+            "export GTK_IM_MODULE=wayland"
             "export XMODIFIERS=@im=fcitx"
             "export XIM_SERVERS=fcitx"
         ];

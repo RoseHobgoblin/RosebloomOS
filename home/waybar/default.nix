@@ -15,7 +15,7 @@
         "name" = "Yuri"; 
         "fixed-center" = true;
         "reload_style_on_change" = true;
-        "height" = 20;
+        "height" = 30;
         "width" = 1920;
         "modules-left" = [ 
           "hyprland/workspaces"

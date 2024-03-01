@@ -21,6 +21,10 @@
     xarchiver
     steam-run
     gh
-    palemoon-bin
+    cliphist
+    ungoogled-chromium
+    jdk17
+    steam-run
+    inkscape
   ];
 }

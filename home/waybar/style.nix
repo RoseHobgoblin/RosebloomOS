@@ -1,8 +1,8 @@
 {theme, ...}: let
-  Rose = builtins.fetchurl rec {
+  rose = builtins.fetchurl rec {
     name = "Logo-${sha256}.svg";
-    url = "https://raw.githubusercontent.com/NixOS/nixos-artwork/master/logo/nix-snowflake.svg";
-    sha256 = "14mbpw8jv1w2c5wvfvj8clmjw0fi956bq5xf9s2q3my14far0as8";
+    url = "https://raw.githubusercontent.com/RoseHobgoblin/RosebloomOS/main/assets/RosebloomLogo.png?token=GHSAT0AAAAAACO2PHIYQYRTXTPF7XYYOCCWZPCNQTQ";
+    sha256 = "022f2dc731c35f394682de73d86d667df03cdbb608147971a164ccb80f799b88";
   };
   inherit (theme) x;
 in

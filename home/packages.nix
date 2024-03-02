@@ -1,0 +1,30 @@
+{ inputs, config, pkgs, nixpkgs, ... }: {
+  home.packages = with pkgs; [
+    wl-clipboard
+    firefox 
+    wofi 
+    vscodium 
+    git 
+    pcmanfm 
+    vesktop 
+    pavucontrol 
+    swaybg
+    viewnior
+    gimp
+    audacity
+    killall
+    mpv
+    qbittorrent
+    gnumake
+    htop
+    mkvtoolnix
+    xarchiver
+    steam-run
+    gh
+    cliphist
+    ungoogled-chromium
+    jdk17
+    steam-run
+    inkscape
+  ];
+}

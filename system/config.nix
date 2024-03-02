@@ -7,7 +7,6 @@ let
 in
 
 {
-
   environment.etc = {
     "machine-id".source = "/nix/persist/etc/machine-id";
     "NetworkManager/system-connections".source = "/nix/persist/etc/NetworkManager/system-connections";
@@ -50,6 +49,7 @@ in
     rosebloom-rebuild
     bloomshot
     libreoffice
+    
   ];
 
   users = {
@@ -66,18 +66,34 @@ in
 
   networking.networkmanager.enable = true;
 
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.initrd.kernelModules = [ "amdgpu" ];
+  #boot.initrd.verbose = false;
+  #boot.consoleLogLevel = 0;
+  #boot.kernelParams = [ "quiet" "udev.log_level=0" ]; 
+  #boot.plymouth.enable = true;
+  #boot.plymouth.theme = "bgrt"; 
   
   time.timeZone = "Pacific/Auckland";
 
   security.rtkit.enable = true;
   security.polkit.enable = true;
    
+
   i18n.defaultLocale = "en_US.UTF-8";
-
-  boot.initrd.kernelModules = [ "amdgpu" ];
-
+  i18n = {
+    inputMethod = {
+      enabled = "fcitx5";
+      fcitx5.addons = with pkgs; [
+        fcitx5-mozc
+        fcitx5-gtk
+       (pkgs.callPackage ../fcitx5-rose-pine/package.nix {})
+      ];
+    };
+  };
+      
   programs.hyprland = {	
     enable = true;
     xwayland.enable = true;
@@ -97,7 +113,7 @@ in
 
   system = {
     nixos = {
-      DistroName = lib.mkForce "RosebloomOS";
+      distroName = lib.mkForce "RosebloomOS";
       distroId = lib.mkForce "rosebloomos";
     };
     stateVersion = "24.05";

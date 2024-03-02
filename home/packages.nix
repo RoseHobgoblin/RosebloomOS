@@ -22,5 +22,6 @@
     steam-run
     gh
     palemoon-bin
+    yt-dlp
   ];
 }

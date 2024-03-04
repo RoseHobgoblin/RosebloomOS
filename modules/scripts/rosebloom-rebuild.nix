@@ -12,7 +12,7 @@ if [ "$1" == "system" ]; then
 
     elif [ "$1" == "home" ]; then
     echo "Performing Home Rebuild"
-    home-manager switch --flake git+https://github.com/RoseHobgoblin/RosebloomOS#$USER
+    home-manager switch --flake /home/rosa/RosebloomOS#rosa
 else
     echo "Usage: $0 <system|home>"
     exit 1

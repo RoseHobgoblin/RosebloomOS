@@ -26,5 +26,7 @@
     jdk17
     steam-run
     inkscape
+    yt-dlp
+    rofi-wayland
   ];
 }

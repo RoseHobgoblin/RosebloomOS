@@ -13,6 +13,7 @@
     ./waybar
     ./toolkit
     ./ags
+    ./vencord
   ];
   home.stateVersion = "24.05";
   programs.home-manager.enable = true;

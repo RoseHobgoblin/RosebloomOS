@@ -6,7 +6,6 @@
     vscodium 
     git 
     pcmanfm 
-    vesktop 
     pavucontrol 
     swaybg
     viewnior

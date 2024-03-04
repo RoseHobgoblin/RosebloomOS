@@ -11,7 +11,7 @@
     ./foot
     ./hyprland
     ./waybar
-    ./gtk
+    ./toolkit
     ./ags
   ];
   home.stateVersion = "24.05";

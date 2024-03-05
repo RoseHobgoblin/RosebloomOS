@@ -6,4 +6,5 @@
     ../../system/config.nix 
     ];
     networking.hostName = "silva";
+    boot.initrd.kernelModules = [ "amdgpu" ];
 }

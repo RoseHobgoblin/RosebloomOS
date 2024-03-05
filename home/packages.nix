@@ -11,7 +11,6 @@
     viewnior
     gimp
     audacity
-    killall
     mpv
     qbittorrent
     gnumake
@@ -26,5 +25,6 @@
     steam-run
     inkscape
     yt-dlp
+    anki
   ];
 }

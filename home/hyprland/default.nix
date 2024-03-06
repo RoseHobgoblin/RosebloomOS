@@ -101,7 +101,7 @@ in {
             "${Mod}, R, exec, wofi --show drun"
             "${Mod}, P, pseudo,"
             "${Mod}, J, togglesplit,"
-            "${Mod}, F2, exec, firefox"
+            "${Mod}, F2, exec, librewolf"
             "${Mod}, D, exec, wofi --show=drun"
             "${Mod}, F3, exec, pcmanfm"
             ",Print, exec, bloomshot"

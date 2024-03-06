@@ -13,18 +13,17 @@
     audacity
     mpv
     qbittorrent
-    gnumake
     htop
     mkvtoolnix
     xarchiver
     steam-run
     gh
     cliphist
-    ungoogled-chromium
     jdk17
     steam-run
     inkscape
     yt-dlp
     anki
+    librewolf
   ];
 }

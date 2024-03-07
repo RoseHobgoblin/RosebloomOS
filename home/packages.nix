@@ -1,7 +1,6 @@
 { inputs, config, pkgs, nixpkgs, ... }: {
   home.packages = with pkgs; [
-    wl-clipboard
-    firefox 
+    wl-clipboard 
     wofi 
     vscodium 
     git 

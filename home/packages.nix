@@ -24,5 +24,6 @@
     yt-dlp
     anki
     librewolf
+    ungoogled-chromium
   ];
 }

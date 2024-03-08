@@ -21,13 +21,15 @@
           "hyprland/workspaces"
         ];
         "modules-center" = [];
-        "modules-right" = [ "wireplumber" "clock" ];
+        "modules-right" = [ "wireplumber" "clock" "battery"];
 
       };
 
 
 
-
+      "battery" = {
+        "format" = "{capacity}%";
+      };
 
       "hyprland/workspaces"= {
         "persistent-workspaces" = {

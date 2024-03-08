@@ -5,9 +5,9 @@
   theme,
   ...
 }: {
-    imports = [./config.nix ./binds.nix ./rules.nix];
+    imports = [./config.nix ./binds.nix ./env.nix];
   
-    programs.hyprland = {	
+    wayland.windowManager.hyprland = {
         enable = true;
         xwayland.enable = true;
     };

@@ -92,11 +92,6 @@ in
       ];
     };
   };
-      
-  programs.hyprland = {	
-    enable = true;
-    xwayland.enable = true;
-  };
 
   hardware.bluetooth.enable = true; 
   hardware.bluetooth.powerOnBoot = true; 

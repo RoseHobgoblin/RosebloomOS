@@ -39,6 +39,9 @@ in
       };
     };
   };
+
+  programs.hyprland.enable = true;
+  programs.hyprland.xwayland.enable = true;
   
   environment.systemPackages = with pkgs; [
     home-manager
@@ -49,9 +52,8 @@ in
     rosebloom-rebuild
     bloomshot
     libreoffice
-    
   ];
-
+  
   users = {
     mutableUsers = false;
     users = {

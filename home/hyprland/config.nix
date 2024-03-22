@@ -1,6 +1,11 @@
  {
   wayland.windowManager.hyprland.settings = {
-      monitor=", preferred, auto, 1";
+      monitor = [ 
+        "eDP-1, preferred, 0x0, 1"
+        "DP-1, preferred, 0x0, 1"
+        "HDMI-A-1, preferred, 1920x0, 1"
+        "DP-3, 1024x768, 3840x0, 1.5"
+      ];
 
       exec-once = [
         "waybar"

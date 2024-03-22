@@ -22,7 +22,7 @@
     steam-run
     inkscape
     yt-dlp
-    anki
+    anki-bin
     librewolf
     ungoogled-chromium
   ];

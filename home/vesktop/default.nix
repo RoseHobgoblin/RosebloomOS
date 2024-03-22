@@ -119,7 +119,7 @@
       RevealAllSpoilers.enabled = false;
       ReverseImageSearch.enabled = false;
       ReviewDB.enabled = true;
-      RoleColorEverywhere.enabled = true;
+      RoleColorEverywhere.enabled = false;
       SearchReply.enabled = true;
       SendTimestamps.enabled = false;
       ServerListIndicators.enabled = false;

@@ -2,8 +2,8 @@
 
 
 let
-    bloomshot = import ../modules/scripts/bloomshot.nix {inherit pkgs; };
-    rosebloom-rebuild = import ../modules/scripts/rosebloom-rebuild.nix {inherit pkgs; };
+  bloomshot = import ../modules/scripts/bloomshot.nix {inherit pkgs; };
+  rosebloom-rebuild = import ../modules/scripts/rosebloom-rebuild.nix {inherit pkgs; };
 in
 
 {
@@ -66,6 +66,7 @@ in
 
   networking.networkmanager.enable = true;
 
+  services.teamviewer.enable = true;
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

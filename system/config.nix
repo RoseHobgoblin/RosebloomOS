@@ -32,6 +32,8 @@ in
       noto-fonts-emoji
       terminus-nerdfont
       nerdfonts
+      roboto
+      roboto-slab
     ];
     fontconfig = {
       defaultFonts = {

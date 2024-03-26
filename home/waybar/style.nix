@@ -9,7 +9,7 @@ in
   with theme.colors; 
   ''
   * {
-    font-family: "M+1 Nerd Font";
+    font-family: "MonaspiceKr NF";
     border: none;
     border-radius: 0;
 

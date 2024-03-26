@@ -4,12 +4,12 @@
         "eDP-1, preferred, 0x0, 1"
         "DP-1, preferred, 0x0, 1"
         "HDMI-A-1, preferred, 1920x0, 1"
-        "DP-3, 1024x768, 3840x0, 1.5"
+        "DP-3, 1024x768, -1024x0, 1"
       ];
 
       exec-once = [
         "waybar"
-        "swaybg -o DP-1 -i Pictures/Wallpapers/RosebloomDef1.png -o HDMI-A-1 -i Pictures/Wallpapers/rosepineblack.png"
+        "swaybg -o DP-1 -i Pictures/Wallpapers/RosebloomDef1.png -o HDMI-A-1 -i Pictures/Wallpapers/rosepinehdmi.png -o DP-3 -i Pictures/Wallpapers/RosebloomDef2.png"
         "swaybg -o eDP-1 -i Pictures/Wallpapers/RosebloomDef1.png"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"

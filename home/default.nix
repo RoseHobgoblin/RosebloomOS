@@ -12,7 +12,7 @@
     ./hyprland
     ./waybar
     ./toolkit
-    ./ags
+   # ./ags
     ./vesktop
   ];
   home.stateVersion = "24.05";

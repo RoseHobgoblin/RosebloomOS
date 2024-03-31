@@ -24,10 +24,10 @@ in {
       "${Mod}, PRINT, exec, bloomshot window"
       "${Modshift}, PRINT, exec, bloomshot area"
 
-      "${Mod}, left, movefocus, l"
-      "${Mod}, right, movefocus, r"
-      "${Mod}, up, movefocus, u"
-      "${Mod}, down, movefocus, d"
+      "${Mod}, left, hy3:movefocus, l"
+      "${Mod}, right, hy3:movefocus, r"
+      "${Mod}, up, hy3:movefocus, u"
+      "${Mod}, down, hy3:movefocus, d"
 
       "${Mod}, 1, workspace, 1"
       "${Mod}, 2, workspace, 2"
@@ -59,7 +59,7 @@ in {
         ];
 
     bindm = [
-      "${Mod}, mouse:272, movewindow"
+      "${Mod}, mouse:272, hy3:movewindow"
       "${Mod}, mouse:273, resizewindow"
     ];
   };

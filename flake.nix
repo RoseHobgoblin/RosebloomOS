@@ -12,9 +12,16 @@
     hyprland.url = "github:hyprwm/Hyprland";
 
     ags.url = "github:Aylur/ags";
+
+    hy3 = {
+      url = "github:outfoxxed/hy3"; # where {version} is the hyprland release version
+      # or "github:outfoxxed/hy3" to follow the development branch.
+      # (you may encounter issues if you dont do the same for hyprland)
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, ... } @ inputs: 
+  outputs = { nixpkgs, home-manager, hyprland, hy3, ... } @ inputs: 
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {

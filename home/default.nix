@@ -1,4 +1,4 @@
-{ inputs, config, ... }:
+{ inputs, config, hy3, hyprland, ... }:
 {
 
   _module.args.theme = import ../theme;

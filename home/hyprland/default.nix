@@ -2,7 +2,6 @@
   pkgs,
   lib,
   inputs,
-  theme,
   hyprland,
   hy3,
   ...

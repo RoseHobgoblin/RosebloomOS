@@ -3,11 +3,11 @@
     enable = true;
     settings = {
       main = {
-	    font = "M+1Code Nerd Font Mono:size=15";
+	    font = "M+1Code Nerd Font Mono:size=12";
       	underline-offset = 1;
       	underline-thickness = 1;
 	      box-drawings-uses-font-glyphs = true;      	
-	      #dpi-aware = true;
+	      dpi-aware = false;
 	
 	      initial-window-size-pixels = "350x250";
 	      pad = "12x12 center";

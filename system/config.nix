@@ -55,7 +55,9 @@ in
     bloomshot
     libreoffice
   ];
-  
+
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
   users = {
     mutableUsers = false;
     users = {

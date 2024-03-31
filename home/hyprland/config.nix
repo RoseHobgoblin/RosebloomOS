@@ -35,7 +35,7 @@
       "col.active_border" = "rgb(c4a7e7) 45deg";
       "col.inactive_border" = "rgb(1f1d2e)";
 
-      layout = "hy3";
+      layout = "dwindle";
 
       allow_tearing = "false";
     };

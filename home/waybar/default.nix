@@ -44,16 +44,9 @@
             format = "{icon}";
             active-only = false;
             format-icons = {
-              "1" = "１";
-              "2" = "２";
-              "3" = "３";
-              "4" = "４";
-              "5" = "５";
-              "6" = "６";
-              "7" = "７";
-              "8" = "８";
-              "9" = "９";
-              "10" = "１０";
+              "active" = "";
+		          "default" = "";
+              "empty" = "";
             };
           "persistent-workspaces" = {
             "*" = 4;

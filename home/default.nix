@@ -13,7 +13,7 @@
     ./waybar
     ./toolkit
     ./starship
-   # ./ags
+    ./ags
     ./vesktop
   ];
   home.stateVersion = "24.05";

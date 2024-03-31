@@ -15,14 +15,14 @@
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-    hy3 = {
-      url = "github:outfoxxed/hy3";
-      inputs.hyprland.follows = "hyprland";
-    };
+    #hyprland-plugins = {
+   #   url = "github:hyprwm/hyprland-plugins";
+   #   inputs.hyprland.follows = "hyprland";
+  #  };
+    #hy3 = {
+    #  url = "github:outfoxxed/hy3";
+    #  inputs.hyprland.follows = "hyprland";
+    #};
   };
 
   outputs = { nixpkgs, home-manager, ... } @ inputs: 

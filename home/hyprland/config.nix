@@ -9,7 +9,7 @@
 
       exec-once = [
         "waybar"
-        "swaybg -o DP-1 -i Pictures/Wallpapers/RosebloomDef1.png -o HDMI-A-1 -i Pictures/Wallpapers/rosepinehdmi.png -o DP-3 -i Pictures/Wallpapers/RosebloomDef2.png"
+        "swaybg -o DP-1 -i Pictures/Wallpapers/rosebloomdp1new.png -o HDMI-A-1 -i Pictures/Wallpapers/rosepinehdmi.png -o DP-3 -i Pictures/Wallpapers/RosebloomDef2.png"
         "swaybg -o eDP-1 -i Pictures/Wallpapers/RosebloomDef1.png"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
@@ -28,10 +28,19 @@
       sensitivity = "0";
     };
 
+    plugin = {
+      hyprbars = {
+          bar_height = 40;
+          bar_text_size = 17;
+          bar_text_font = "TeX Gyre Chorus";
+          bar_text_align = "left";
+      };
+    };
+
     general = {
       gaps_in = "5";
       gaps_out = "10";
-      border_size = "2";
+      border_size = "0";
       "col.active_border" = "rgb(c4a7e7) 45deg";
       "col.inactive_border" = "rgb(1f1d2e)";
 

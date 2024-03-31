@@ -12,7 +12,7 @@
     ./hyprland
     ./waybar
     ./toolkit
-    ./starship.nix
+    ./starship
    # ./ags
     ./vesktop
   ];

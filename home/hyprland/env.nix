@@ -14,6 +14,7 @@ in {
           "SDL_IM_MODULE, fcitx:"
           "INPUT_METHOD, fcitx"
           "XCURSOR_SIZE,24"
+          "$TERMFLOAT=$TERM --title fly_is_foot -w 1067x630"
       ];
   };
 }

@@ -4,12 +4,14 @@
     settings = {
       add_newline = false;
       format = "$directory$git_branch$character";
+      right_format = "$cmd_duration";
+
       character = {
-        success_symbol = "[ ᐉ](bright-green bold)";
+        success_symbol = "[ ᐉ](bright-green)";
         error_symbol = "[ ᐉ](bright-red)";
         vicmd_symbol = "[ ᐉ](bright-yellow)";
       };
-      right_format = "$cmd_duration";
+
       directory = {
         format = "[▉]($style)[(bg:background fg:none) $path ](inverted)[▕]($style)";
         style = "bg:background fg:none";
@@ -18,13 +20,10 @@
         truncation_symbol = "…/";
         truncation_length = 3;
       };
-      directory = {
+
+      git_branch = {
         format = "[▉]($style)[(bg:background fg:none) \ue725 $branch ](inverted)[▕]($style)";
         style = "bg:background fg:none";
-      };
-      character.format = " ";
-      git_branch = {
-        
       };
     };
   };

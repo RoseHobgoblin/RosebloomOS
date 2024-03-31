@@ -15,7 +15,8 @@ in
 
     }
     window#waybar {
-      background: rgb(31, 29, 46);
+      background: rgb(25, 23, 36);
+      color: rgb(224, 222, 244);
     }
     #clock {
       padding: 0px 5px;

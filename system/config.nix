@@ -72,7 +72,7 @@ in
 
   networking.networkmanager.enable = true;
 
-  services.teamviewer.enable = true;
+  #services.teamviewer.enable = true;
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

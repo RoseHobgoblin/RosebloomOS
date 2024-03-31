@@ -11,45 +11,95 @@
     enable = true;
     package = pkgs.waybar;
     settings = {
-      "bar" = {
-        "name" = "Yuri"; 
-        "fixed-center" = true;
-        "reload_style_on_change" = true;
-        "height" = 30;
-        "width" = 1920;
-        "modules-left" = [ 
+      mainBar = {
+        name = "Yuri"; 
+        fixed-center = true;
+        reload_style_on_change = true;
+        height = 30;
+        width = 1920;
+        modules-left = [ 
+          "custom/dividerleft" 
           "hyprland/workspaces"
+          "custom/dividerright" 
         ];
-        "modules-center" = [];
-        "modules-right" = [ "wireplumber" "clock" "battery"];
+        modules-center = [];
+        modules-right = [ 
+          "custom/dividerleft" 
+          "battery" 
+          "custom/dividercentre" 
+          "network"
+          "custom/dividercentre" 
+          "wireplumber" 
+          "custom/dividercentre" 
+          "clock" 
+          "custom/dividerright" 
+        ];
 
-      };
+        "battery" = {
+          format = "{capacity}%";
+        };
 
+        "hyprland/workspaces" = {
+            on-click = "activate";
+            format = "{icon}";
+            active-only = false;
+            format-icons = {
+              "1" = "１";
+              "2" = "２";
+              "3" = "３";
+              "4" = "４";
+              "5" = "５";
+              "6" = "６";
+              "7" = "７";
+              "8" = "８";
+              "9" = "９";
+              "10" = "１０";
+            };
+          "persistent-workspaces" = {
+            "*" = 4;
+            "HDMI-A-1" = 4;
+          };
+        };
 
+        "wireplumber" = {
+          format = ''音量  {volume}%'';
+          format-muted = "音量  {volume}%";
+          max-volume = "150";
+          scroll-step = "0.2";
+        };
+        
+        "network" = {
+          format-wifi = "通信網";
+          format-ethernet = "通信網";
+          format-disconnected = "通信網";
+        };
 
-      "battery" = {
-        "format" = "{capacity}%";
-      };
+        "clock" = {
+          format = "{:%A, %d %B %Y  %H:%M:%S}";
+          interval = 1;
+          timezones = [
+            "Pacific/Auckland"
+            "Asia/Jakarta"
+          ];
+          actions = {
+            on-scroll-up = "tz_up";
+            on-scroll-down = "tz_down";
+          };
+        };
 
-      "hyprland/workspaces"= {
-        "persistent-workspaces" = {
-          "*" = 4;
-          "HDMI-A-1" = 4;
+        "custom/dividercentre" = {
+          format = "」:「";
+        };
+
+        "custom/dividerleft" = {
+          format = ":「";
+        };
+
+        "custom/dividerright" = {
+          format = "」:";
         };
       };
-
-      "wireplumber" = {
-        "format" = "{volume}%";
-        "format-muted" = "";
-        "max-volume" = "150";
-        "scroll-step" = "0.2";
-      };
-
-      "clock" = {
-        "format" = "%H:%M:%S";
-        "tooltip-format" = "%A, %d %B %Y %H:%M:%S";
-        "interval" = 1;
-      };
+      
     };
   };
 }

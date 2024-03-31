@@ -26,5 +26,7 @@
     librewolf
     ungoogled-chromium
     microsoft-edge
+    ffmpeg
+    gifsicle
   ];
 }

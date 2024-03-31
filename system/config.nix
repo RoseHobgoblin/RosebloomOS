@@ -96,6 +96,7 @@ in
         fcitx5-mozc
         fcitx5-gtk
        (pkgs.callPackage ../fcitx5-rose-pine/package.nix {})
+       (pkgs.callPackage ../zkanji/package.nix {})
       ];
     };
   };

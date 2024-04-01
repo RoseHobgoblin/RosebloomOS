@@ -1,12 +1,15 @@
-{ stdenv
+{ lib
+, stdenv
 , fetchFromGitHub
-, qt6
-, libsForQt5
-, lib
-, libxcb
-, libXtst
+, pkg-config
 , xcbutil
-, ... }: # Qxt to be resolved later
+, libxcb
+, libsForQt5
+, qtbase
+, qtsvg
+, wrapQtAppsHook
+,
+}:
 
 stdenv.mkDerivation rec {
   pname = "zkanji";
@@ -18,8 +21,8 @@ stdenv.mkDerivation rec {
     sha256 = "0pvxxwppmnkdbnc5pwwbbz72849xq0akl6xm1b39xlqz6486z3wb";
   };
 
-  buildInputs = [ qt6.qtbase qt6.qtsvg libxcb libXtst xcbutil]; 
-  nativeBuildInputs = [ qt6.wrapQtAppsHook libXtst ]; 
+  buildInputs = [ qtbase qtsvg libxcb xcbutil.dev  ]; 
+  nativeBuildInputs = [ wrapQtAppsHook pkg-config ]; 
 
   buildPhase = ''
   export LANG=C.UTF-8
@@ -32,7 +35,7 @@ stdenv.mkDerivation rec {
     mkdir -p $out/bin
     mkdir -p $out/share/zkanji 
     cp -R $buildDir/zkanji $out/bin/  
-    cp -R Resources $out/share/zkanji  # Assuming a 'Resources' folder
+    cp -R Resources $out/share/zkanji 
     # ... other installation steps as needed
   '';
 

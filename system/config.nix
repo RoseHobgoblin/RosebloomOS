@@ -95,7 +95,7 @@ in
       fcitx5.addons = with pkgs; [
         fcitx5-mozc
         fcitx5-gtk
-       (pkgs.callPackage ../fcitx5-rose-pine/package.nix {})
+        fcitx5-rose-pine
        (pkgs.callPackage ../zkanji/package.nix {})
       ];
     };

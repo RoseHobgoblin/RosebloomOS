@@ -11,8 +11,67 @@
     enable = true;
     package = pkgs.waybar;
     settings = {
-      mainBar = {
-        name = "Yuri"; 
+      DP-1 = {
+        include = "~/.config/waybar/modules.json";
+        output = [
+          "DP-1"
+        ];
+        fixed-center = true;
+        reload_style_on_change = true;
+        height = 30;
+        width = 1920;
+        modules-left = [ 
+          "custom/dividerleft" 
+          "hyprland/workspaces"
+          "custom/dividerright" 
+        ];
+        modules-center = [];
+        modules-right = [ 
+          "custom/dividerleft" 
+          "network"
+          "custom/dividercentre" 
+          "wireplumber" 
+          "custom/dividercentre" 
+          "clock" 
+          "custom/dividerright" 
+        ];
+      };
+      HDMI-A-1 = {
+        include = "~/.config/waybar/modules.json";
+        output = [
+          "HDMI-A-1"
+        ];
+        fixed-center = true;
+        reload_style_on_change = true;
+        height = 30;
+        width = 1920;
+        modules-left = [ 
+          "custom/dividerleft" 
+          "hyprland/workspaces"
+          "custom/dividerright" 
+        ];
+      };
+      DP-3 = {
+        include = "~/.config/waybar/modules.json";
+        output = [
+          "DP-3"
+        ];
+        fixed-center = true;
+        reload_style_on_change = true;
+        height = 30;
+        modules-left = [ 
+          "custom/dividerleft" 
+        ];
+        modules-center = [];
+        modules-right = [
+          "custom/dividerright" 
+        ];
+      };
+      eDP-1 = {
+        include = "~/.config/waybar/modules.json";
+        output = [
+          "eDP-1"
+        ];
         fixed-center = true;
         reload_style_on_change = true;
         height = 30;
@@ -34,9 +93,12 @@
           "clock" 
           "custom/dividerright" 
         ];
-
-        "battery" = {
-          format = "{capacity}%";
+      };
+    };
+  };
+  xdg.configFile."waybar/modules.json".text = builtins.toJSON {
+            "battery" = {
+          format = "電池 {capacity}%";
         };
 
         "hyprland/workspaces" = {
@@ -91,8 +153,5 @@
         "custom/dividerright" = {
           format = "」:";
         };
-      };
-      
-    };
   };
 }

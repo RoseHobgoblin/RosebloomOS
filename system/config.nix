@@ -30,8 +30,7 @@ in
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
-      terminus-nerdfont
-      nerdfonts
+      (nerdfonts.override { fonts = [ "MPlus" ]; })
       roboto
       roboto-slab
     ];
@@ -96,7 +95,7 @@ in
         fcitx5-mozc
         fcitx5-gtk
         fcitx5-rose-pine
-       (pkgs.callPackage ../zkanji/package.nix {})
+       #(pkgs.callPackage ../zkanji/package.nix {})
       ];
     };
   };

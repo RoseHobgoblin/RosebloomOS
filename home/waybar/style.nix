@@ -30,6 +30,10 @@ in
       padding: 0px 5px;
     }
 
+    #battery {
+      padding: 0px 5px;
+    }
+
     #network.wifi,
     #network.ethernet {
       color: rgb(196, 167, 231);

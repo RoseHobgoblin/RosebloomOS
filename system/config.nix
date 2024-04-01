@@ -48,7 +48,6 @@ in
     home-manager
     neovim
     git
-    mako
     libnotify
     rosebloom-rebuild
     bloomshot

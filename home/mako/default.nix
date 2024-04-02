@@ -9,5 +9,6 @@
     borderSize = 2;
     width = 400;
     height = 600;
+    maxVisible = 5;
   };
 }

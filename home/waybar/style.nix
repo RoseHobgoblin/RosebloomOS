@@ -9,7 +9,7 @@ in
   with theme.colors; 
   ''
   * {
-    font-family: "M+1 Nerd Font";
+    font-family: "M+1Code Nerd Font Mono";
     border: none;
     border-radius: 0;
 
@@ -43,9 +43,15 @@ in
     #wireplumber.muted {
       color: rgb(110, 106, 134);
     }
+
+    #workspaces {
+      font-size: 18px;
+    }
+    
     #custom-dividerleft,
     #custom-dividercentre,                    
     #custom-dividerright {
       color: rgb(235, 111, 146);
+      font-family: "M+1 Nerd Font";
     }
   ''

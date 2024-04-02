@@ -100,7 +100,8 @@
       "5,monitor:HDMI-A-1"
       "6,monitor:HDMI-A-1"
       "7,monitor:HDMI-A-1"
-      "8,monitor:HDMI-A-1"
+      "8,monitor:DP-3"
+      "9,monitor:DP-3"
     ];
 
     

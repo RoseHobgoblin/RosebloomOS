@@ -12,7 +12,10 @@
     package = pkgs.waybar;
     settings = {
       DP-1 = {
-        include = "~/.config/waybar/modules.json";
+        include = [
+          "~/.config/waybar/modules.json" 
+          "~/.config/waybar/hyprlandhortus.json"
+        ];
         output = [
           "DP-1"
         ];
@@ -37,7 +40,10 @@
         ];
       };
       HDMI-A-1 = {
-        include = "~/.config/waybar/modules.json";
+        include = [
+          "~/.config/waybar/modules.json" 
+          "~/.config/waybar/hyprlandhortus.json"
+        ];
         output = [
           "HDMI-A-1"
         ];
@@ -52,7 +58,10 @@
         ];
       };
       DP-3 = {
-        include = "~/.config/waybar/modules.json";
+        include = [
+          "~/.config/waybar/modules.json" 
+          "~/.config/waybar/hyprlandhortus.json"
+        ];
         output = [
           "DP-3"
         ];
@@ -68,7 +77,10 @@
         ];
       };
       eDP-1 = {
-        include = "~/.config/waybar/modules.json";
+        include = [
+          "~/.config/waybar/modules.json" 
+          "~/.config/waybar/hyprlandsilva.json"
+        ];
         output = [
           "eDP-1"
         ];
@@ -96,62 +108,82 @@
       };
     };
   };
+
   xdg.configFile."waybar/modules.json".text = builtins.toJSON {
-            "battery" = {
-          format = "電池 {capacity}%";
-        };
+    "battery" = {
+      format = "BATTERY {capacity:3}%";
+    };
 
-        "hyprland/workspaces" = {
-            on-click = "activate";
-            format = "{icon}";
-            active-only = false;
-            format-icons = {
-              "active" = "";
-		          "default" = "";
-              "empty" = "";
-            };
-          "persistent-workspaces" = {
-            "*" = 4;
-            "HDMI-A-1" = 4;
-          };
-        };
-
-        "wireplumber" = {
-          format = ''音量  {volume}%'';
-          format-muted = "音量  {volume}%";
-          max-volume = "150";
-          scroll-step = "0.2";
-        };
+    "wireplumber" = {
+      format = ''<span foreground="#c4a7e7">VOLUME </span>{volume:3}%'';
+      format-muted = ''VOLUME {volume:3}%'';
+      max-volume = "150";
+      scroll-step = "0.2";
+    };
         
-        "network" = {
-          format-wifi = "通信網";
-          format-ethernet = "通信網";
-          format-disconnected = "通信網";
-        };
+    "network" = {
+      format-wifi = "NETWORK";
+      format-ethernet = "NETWORK";
+      format-disconnected = "NETWORK";
+    };
 
-        "clock" = {
-          format = "{:%A, %d %B %Y  %H:%M:%S}";
-          interval = 1;
-          timezones = [
-            "Pacific/Auckland"
-            "Asia/Jakarta"
-          ];
-          actions = {
-            on-scroll-up = "tz_up";
-            on-scroll-down = "tz_down";
-          };
-        };
+    "clock" = {
+      format = "{:%d %B %Y  %H:%M:%S}";
+      interval = 1;
+      timezones = [
+        "Pacific/Auckland"
+        "Asia/Jakarta"
+      ];
+      actions = {
+        on-scroll-up = "tz_up";
+        on-scroll-down = "tz_down";
+      };
+    };
 
-        "custom/dividercentre" = {
-          format = "」:「";
-        };
+    "custom/dividercentre" = {
+      format = "」:「";
+    };
 
-        "custom/dividerleft" = {
-          format = ":「";
-        };
+    "custom/dividerleft" = {
+      format = ":「";
+    };
 
-        "custom/dividerright" = {
-          format = "」:";
-        };
+    "custom/dividerright" = {
+      format = "」:";
+    };
+  };
+
+  xdg.configFile."waybar/hyprlandhortus.json".text = builtins.toJSON {
+    "hyprland/workspaces" = {
+      on-click = "activate";
+      format = "{icon}";
+      active-only = false;
+      format-icons = {
+        "active" = ''<span foreground="#c4a7e7">󱘹󱘹</span>'';
+		    "default" = ''<span foreground="#e0def4">󱘹󱘹</span>'';
+        "empty" = ''<span foreground="#6e6a86">󰍴</span>'';
+      };
+      "persistent-workspaces" = {
+        "DP-1" = 4;
+        "HDMI-A-1" = 3;
+        "DP-3" = 2;
+      };
+    };
+  };
+
+  xdg.configFile."waybar/hyprlandsilva.json".text = builtins.toJSON {
+    "hyprland/workspaces" = {
+      on-click = "activate";
+      format = "{icon}";
+      active-only = false;
+      format-icons = {
+        "active" = ''<span foreground="#c4a7e7">󱘹󱘹</span>'';
+		    "default" = ''<span foreground="#e0def4">󱘹󱘹</span>'';
+        "empty" = ''<span foreground="#6e6a86">󰍴</span>'';
+      };
+      "persistent-workspaces" = {
+        "*" = 6;
+      };
+    };
   };
 }

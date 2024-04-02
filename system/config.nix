@@ -52,6 +52,7 @@ in
     rosebloom-rebuild
     bloomshot
     libreoffice
+    #(libsForQt5.callPackage ../zkanji/package.nix {})
   ];
 
   programs.zsh.enable = true;
@@ -94,7 +95,6 @@ in
         fcitx5-mozc
         fcitx5-gtk
         fcitx5-rose-pine
-       #(pkgs.callPackage ../zkanji/package.nix {})
       ];
     };
   };

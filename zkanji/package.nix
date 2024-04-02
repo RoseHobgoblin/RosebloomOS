@@ -7,7 +7,9 @@
 , libsForQt5
 , qtbase
 , qtsvg
+, qtx11extras
 , wrapQtAppsHook
+, qmake
 ,
 }:
 
@@ -15,29 +17,20 @@ stdenv.mkDerivation rec {
   pname = "zkanji";
   version = "0.1.0"; 
   src = fetchFromGitHub {
-    owner = "z1dev";
+    owner = "RoseHobgoblin";
     repo = "zkanji";
-    rev = "adb74de620ebf00d007447fdda5b6bdc76927830"; 
-    sha256 = "0pvxxwppmnkdbnc5pwwbbz72849xq0akl6xm1b39xlqz6486z3wb";
+    rev = "1c8a62f2a38dcc58c16c9da7e656589685cdd492"; 
+    sha256 = "06cqlag9lcw09i4bwmdcmzqrjr83mcbcnybaips0q53p3w4x0az7";
   };
 
-  buildInputs = [ qtbase qtsvg libxcb xcbutil.dev  ]; 
-  nativeBuildInputs = [ wrapQtAppsHook pkg-config ]; 
+  buildInputs = [ qtbase qtsvg libxcb xcbutil.dev qtx11extras ]; 
+  nativeBuildInputs = [ wrapQtAppsHook pkg-config qmake ]; 
 
-  buildPhase = ''
+  preBuild = ''
   export LANG=C.UTF-8
-
-    qmake # Or qmake2, determine the correct version for zkanji
-    make
   '';
 
-  installPhase = ''
-    mkdir -p $out/bin
-    mkdir -p $out/share/zkanji 
-    cp -R $buildDir/zkanji $out/bin/  
-    cp -R Resources $out/share/zkanji 
-    # ... other installation steps as needed
-  '';
+  installPhase = '''';
 
   meta = with lib; {
     description = "A Japanese kanji learning application"; 

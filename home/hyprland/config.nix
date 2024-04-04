@@ -4,13 +4,13 @@
       "eDP-1, preferred, 0x0, 1"
       "DP-1, preferred, 0x0, 1"
       "HDMI-A-1, preferred, 1920x0, 1"
-      "DP-3, 1024x768, -1024x0, auto"
+      "DP-3, 1280x1024, -1024x0, auto"
     ];
 
       exec-once = [
         "waybar"
-        "swaybg -o DP-1 -i Pictures/Wallpapers/rosebloomdp1new.png -o HDMI-A-1 -i Pictures/Wallpapers/rosepinehdmi.png -o DP-3 -i Pictures/Wallpapers/RosebloomDef2.png"
-        "swaybg -o eDP-1 -i Pictures/Wallpapers/RosebloomDef1.png"
+        "swaybg -o DP-1 -i Pictures/Wallpapers/Rosebloom16:9.png -o HDMI-A-1 -i Pictures/Wallpapers/rosepinehdmi.png -o DP-3 -i Pictures/Wallpapers/RosebloomDef2.png"
+        "swaybg -o eDP-1 -i Pictures/Wallpapers/Rosebloom16:9.png"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
         "fcitx5"
@@ -40,9 +40,9 @@
     general = {
       gaps_in = "5";
       gaps_out = "10";
-      border_size = "0";
-      "col.active_border" = "rgb(c4a7e7) 45deg";
-      "col.inactive_border" = "rgb(1f1d2e)";
+      border_size = "2";
+      "col.active_border" = "rgb(191724)";
+      "col.inactive_border" = "rgb(191724)";
 
       layout = "dwindle";
 

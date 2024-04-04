@@ -9,7 +9,7 @@
 	      box-drawings-uses-font-glyphs = true;      	
 	      dpi-aware = false;
 	
-	      initial-window-size-pixels = "350x250";
+	      initial-window-size-pixels = "700x500";
 	      pad = "12x12 center";
       };
 

@@ -9,7 +9,7 @@ in
   with theme.colors; 
   ''
   * {
-    font-family: "M+1Code Nerd Font Mono";
+    font-family: "M+1 Nerd Font";
     border: none;
     border-radius: 0;
 
@@ -18,20 +18,13 @@ in
       background: rgb(25, 23, 36);
       color: rgb(224, 222, 244);
     }
-    #clock {
-      padding: 0px 5px;
-    }
-
+    
+    #battery,
+    #network,
+    #clock,
     #wireplumber {
       padding: 0px 5px;
-    }
-
-    #network {
-      padding: 0px 5px;
-    }
-
-    #battery {
-      padding: 0px 5px;
+      font-family: "M+1Code Nerd Font Mono";
     }
 
     #network.wifi,
@@ -42,10 +35,6 @@ in
 
     #wireplumber.muted {
       color: rgb(110, 106, 134);
-    }
-
-    #workspaces {
-      font-size: 18px;
     }
     
     #custom-dividerleft,

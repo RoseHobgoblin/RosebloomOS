@@ -98,9 +98,9 @@
           "custom/dividerleft" 
           "battery" 
           "custom/dividercentre" 
-          "network"
-          "custom/dividercentre" 
           "wireplumber" 
+          "custom/dividercentre" 
+          "network"
           "custom/dividercentre" 
           "clock" 
           "custom/dividerright" 
@@ -111,7 +111,8 @@
 
   xdg.configFile."waybar/modules.json".text = builtins.toJSON {
     "battery" = {
-      format = "BATTERY {capacity:3}%";
+      format-charging = ''<span foreground="#c4a7e7">BATTERY </span>{capacity:3}%'';
+      format = ''<span foreground="#e0def4">BATTERY </span>{capacity:3}%'';
     };
 
     "wireplumber" = {
@@ -128,7 +129,7 @@
     };
 
     "clock" = {
-      format = "{:%d %B %Y  %H:%M:%S}";
+      format = "{:%A, %d %B %Y  %H:%M:%S}";
       interval = 1;
       timezones = [
         "Pacific/Auckland"
@@ -159,9 +160,9 @@
       format = "{icon}";
       active-only = false;
       format-icons = {
-        "active" = ''<span foreground="#c4a7e7">󱘹󱘹</span>'';
-		    "default" = ''<span foreground="#e0def4">󱘹󱘹</span>'';
-        "empty" = ''<span foreground="#6e6a86">󰍴</span>'';
+        "active" = "";
+		    "default" = "";
+        "empty" = "";
       };
       "persistent-workspaces" = {
         "DP-1" = 4;
@@ -177,12 +178,12 @@
       format = "{icon}";
       active-only = false;
       format-icons = {
-        "active" = ''<span foreground="#c4a7e7">󱘹󱘹</span>'';
-		    "default" = ''<span foreground="#e0def4">󱘹󱘹</span>'';
-        "empty" = ''<span foreground="#6e6a86">󰍴</span>'';
+        "active" = "";
+		    "default" = "";
+        "empty" = "";
       };
       "persistent-workspaces" = {
-        "*" = 6;
+        "*" = 5;
       };
     };
   };

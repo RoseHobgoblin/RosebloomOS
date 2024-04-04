@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, nixpkgs, ... }: {
+{ pkgs, ... }: {
   home.packages = with pkgs; [
     wl-clipboard 
     wofi 

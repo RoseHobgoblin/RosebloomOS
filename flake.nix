@@ -35,12 +35,12 @@
   in {
     nixosConfigurations."hortus" = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs system; };
-      modules = [ ./hosts/hortus/host.nix ];
+      modules = [ ./hosts/hortus ];
     };
 
     nixosConfigurations."silva" = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs system; };
-      modules = [ ./hosts/silva/host.nix ];
+      modules = [ ./hosts/silva ];
     };
 
 

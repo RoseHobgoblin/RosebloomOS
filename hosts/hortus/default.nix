@@ -3,7 +3,7 @@
 {
     imports = [ 
     ./hardware-configuration.nix
-    ../../system/config.nix 
+    ../../system
     ];
     networking.hostName = "hortus";
 }

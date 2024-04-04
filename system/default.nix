@@ -14,6 +14,7 @@ in
   
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnsupportedSystem = true;
+  
   nix = {
     settings = {
       experimental-features = "nix-command flakes";
@@ -27,9 +28,7 @@ in
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
-      noto-fonts
-      noto-fonts-cjk
-      noto-fonts-emoji
+      openmoji-color
       (nerdfonts.override { fonts = [ "MPlus" ]; })
       roboto
       roboto-slab
@@ -37,12 +36,13 @@ in
     fontconfig = {
       defaultFonts = {
         serif = [ "M+1 Nerd Font" ];
+        emoji = [ "OpenMoji Color" ];
       };
     };
   };
 
   programs.hyprland.enable = true;
-  programs.hyprland.xwayland.enable = true;
+  #programs.hyprland.xwayland.enable = true;
   
   environment.systemPackages = with pkgs; [
     home-manager
@@ -85,10 +85,9 @@ in
 
   security.rtkit.enable = true;
   security.polkit.enable = true;
-   
 
-  i18n.defaultLocale = "en_US.UTF-8";
   i18n = {
+    defaultLocale = "en_US.UTF-8";
     inputMethod = {
       enabled = "fcitx5";
       fcitx5.addons = with pkgs; [
@@ -104,6 +103,7 @@ in
   services.blueman.enable = true;
 
   services.openssh.enable = true;
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;

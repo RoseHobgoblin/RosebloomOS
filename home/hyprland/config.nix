@@ -9,8 +9,8 @@
 
       exec-once = [
         "waybar"
-        "swaybg -o DP-1 -i Pictures/Wallpapers/Rosebloom16:9.png -o HDMI-A-1 -i Pictures/Wallpapers/rosepinehdmi.png -o DP-3 -i Pictures/Wallpapers/RosebloomDef2.png"
-        "swaybg -o eDP-1 -i Pictures/Wallpapers/Rosebloom16:9.png"
+        "swaybg -o DP-1 -i RosebloomOS/theme/dark/16:9.png -o HDMI-A-1 -i RosebloomOS/theme/dark/16:9Blank.png -o DP-3 -i RosebloomOS/theme/dark/5:4.png"
+        "swaybg -o eDP-1 -i RosebloomOS/theme/dark/16:9.png"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
         "fcitx5"

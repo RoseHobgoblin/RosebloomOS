@@ -4,7 +4,7 @@
       "eDP-1, preferred, 0x0, 1"
       "DP-1, preferred, 0x0, 1"
       "HDMI-A-1, preferred, 1920x0, 1"
-      "DP-3, 1280x1024, -1024x0, auto"
+      "DP-3, 1280x1024, -1280x0, auto"
     ];
 
       exec-once = [

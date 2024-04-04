@@ -1,4 +1,4 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, theme, ... }: {
   services.mako = {
     enable = true;
 

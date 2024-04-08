@@ -6,8 +6,8 @@
     enable = true;
     theme.name = "rose-pine";
     theme.package = pkgs.rose-pine-gtk-theme;
-    cursorTheme.name = "Catppuccin-Macchiato-Dark";
-    cursorTheme.package = pkgs.catppuccin-cursors.macchiatoDark;
+    cursorTheme.name = "BreezeX-RoséPine";
+    cursorTheme.package = pkgs.rose-pine-cursor;
     iconTheme.name = "rose-pine";
     iconTheme.package = pkgs.rose-pine-icon-theme;
     font.name = "source-code-pro";
@@ -16,7 +16,7 @@
 
   qt = {
     enable = true;
-    platformTheme = "gtk";
+    platformTheme = "gtk3";
     style.name = "gtk2";
   };
 

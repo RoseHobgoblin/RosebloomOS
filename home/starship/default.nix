@@ -22,7 +22,7 @@
       };
 
       git_branch = {
-        format = "[▉]($style)[(bg:background fg:none) \ue725 $branch ](inverted)[▕]($style)";
+        format = "[▉]($style)[(bg:background fg:none) $branch ](inverted)[▕]($style)";
         style = "bg:background fg:none";
       };
     };

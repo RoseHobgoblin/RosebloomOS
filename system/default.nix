@@ -42,7 +42,8 @@ in
   };
 
   programs.hyprland.enable = true;
-  #programs.hyprland.xwayland.enable = true;
+  programs.hyprland.package = inputs.hyprland.packages.${pkgs.system}.hyprland; 
+  programs.hyprland.xwayland.enable = true;
   
   environment.systemPackages = with pkgs; [
     home-manager

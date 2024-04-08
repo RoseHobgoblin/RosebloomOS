@@ -13,7 +13,7 @@
     ./waybar
     ./toolkit
     ./starship
-    ./ags
+    #./ags
     ./vesktop
     ./zsh
     ./mako

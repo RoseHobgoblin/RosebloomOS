@@ -4,28 +4,26 @@
     wofi 
     vscodium 
     git 
-    pcmanfm 
     pavucontrol 
     swaybg
     viewnior
     gimp
-    audacity
+    #audacity
     mpv
     qbittorrent
     htop
-    mkvtoolnix
+    pcmanfm
     xarchiver
-    steam-run
+    #mkvtoolnix
+    #steam-run
     gh
     cliphist
-    jdk17
-    steam-run
-    inkscape
+    #inkscape
     yt-dlp
-    anki-bin
+    ##anki-bin
     librewolf
-    ungoogled-chromium
-    microsoft-edge
+    #ungoogled-chromium
+    #microsoft-edge
     ffmpeg
     gifsicle
   ];

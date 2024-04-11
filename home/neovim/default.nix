@@ -1,3 +1,5 @@
+{ inputs, config, ... }:
+
 {
   programs.neovim = {
     enable = true;
@@ -6,7 +8,7 @@
 
     plugins = with vimPlugins [
       neogit
-    ]
+    ];
   };
 }
   

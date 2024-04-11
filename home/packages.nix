@@ -20,11 +20,14 @@
     cliphist
     #inkscape
     yt-dlp
-    ##anki-bin
+    anki-bin
     librewolf
-    #ungoogled-chromium
-    #microsoft-edge
+    ungoogled-chromium
+    microsoft-edge
+    overskride
     ffmpeg
     gifsicle
+    gnome.nautilus
+    ranger
   ];
 }

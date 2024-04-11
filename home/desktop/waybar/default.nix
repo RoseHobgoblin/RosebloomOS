@@ -162,7 +162,7 @@
       format-icons = {
         "active" = "";
 		    "default" = "";
-        "empty" = "";
+        "empty" = "";
       };
       "persistent-workspaces" = {
         "DP-1" = 4;

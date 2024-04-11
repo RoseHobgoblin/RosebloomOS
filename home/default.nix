@@ -8,15 +8,16 @@
   };
   imports = [
     ./packages.nix
+    #./desktop/ags
+    ./desktop/hyprland
+    ./desktop/mako
+    ./desktop/waybar
     ./foot
-    ./hyprland
-    ./waybar
+    ./neovim
     ./toolkit
     ./starship
-    #./ags
     ./vesktop
     ./zsh
-    ./mako
   ];
   home.stateVersion = "24.05";
   programs.home-manager.enable = true;

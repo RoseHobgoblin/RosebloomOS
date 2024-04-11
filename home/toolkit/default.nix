@@ -10,8 +10,8 @@
     cursorTheme.package = pkgs.rose-pine-cursor;
     iconTheme.name = "rose-pine";
     iconTheme.package = pkgs.rose-pine-icon-theme;
-    font.name = "source-code-pro";
-    font.package = (pkgs.nerdfonts.override { fonts = [ "SourceCodePro" ]; });
+    #font.name = "source-code-pro";
+    #font.package = (pkgs.nerdfonts.override { fonts = [ "SourceCodePro" ]; });
   };
 
   qt = {

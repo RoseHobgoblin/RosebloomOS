@@ -30,10 +30,11 @@
 
     plugin = {
       hyprbars = {
-          bar_height = 40;
-          bar_text_size = 17;
-          bar_text_font = "TeX Gyre Chorus";
-          bar_text_align = "left";
+          bar_height = 20;
+          bar_text_size = 10;
+          bar_text_font = "M+1 Nerd Font";
+          bar_text_align = "centre";
+          bar_colour = "rgb(e0def4)";
       };
     };
 
@@ -41,7 +42,7 @@
       gaps_in = "5";
       gaps_out = "10";
       border_size = "2";
-      "col.active_border" = "rgb(191724)";
+      "col.active_border" = "rgb(e0def4)";
       "col.inactive_border" = "rgb(191724)";
 
       layout = "dwindle";

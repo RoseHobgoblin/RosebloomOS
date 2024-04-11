@@ -5,7 +5,7 @@
 , nixosTests
 }:
 
-((buildMozillaMach rec {
+(buildMozillaMach rec {
   pname = "mercury";
   packageVersion = "123.0.1";
   applicationName = "Mercury Browser";
@@ -43,15 +43,4 @@
     mainProgram = "mercury";
   };
   #tests = [ nixosTests.floorp ];
-}).override {
-  # Upstream build configuration can be found at
-  # .github/workflows/src/linux/shared/mozconfig_linux_base
-  privacySupport = true;
-  webrtcSupport = true;
-  enableOfficialBranding = false;
-  googleAPISupport = true;
-  mlsAPISupport = true;
-}).overrideAttrs (prev: {
-  MOZ_DATA_REPORTING = "";
-  MOZ_TELEMETRY_REPORTING = "";
 })

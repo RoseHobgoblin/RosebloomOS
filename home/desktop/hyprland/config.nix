@@ -34,7 +34,7 @@
           bar_text_size = 10;
           bar_text_font = "M+1 Nerd Font";
           bar_text_align = "centre";
-          bar_colour = "rgb(e0def4)";
+          bar_color = "rgb(e0def4)";
       };
     };
 

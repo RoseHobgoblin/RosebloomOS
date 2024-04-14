@@ -57,8 +57,10 @@ in
     #(libsForQt5.callPackage ../zkanji/package.nix {})
   ];
 
+  
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
+
   users = {
     mutableUsers = false;
     users = {
@@ -74,6 +76,7 @@ in
   networking.networkmanager.enable = true;
 
   #services.teamviewer.enable = true;
+
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

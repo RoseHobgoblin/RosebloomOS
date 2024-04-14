@@ -29,5 +29,6 @@
     gifsicle
     gnome.nautilus
     ranger
+    gradience
   ];
 }

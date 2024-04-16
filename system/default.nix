@@ -7,6 +7,10 @@ let
 in
 
 {
+  imports = [
+    ./greetd.nix
+  ];
+
   environment.etc = {
     "machine-id".source = "/nix/persist/etc/machine-id";
     "NetworkManager/system-connections".source = "/nix/persist/etc/NetworkManager/system-connections";
@@ -44,16 +48,6 @@ in
   programs.hyprland.enable = true;
   programs.hyprland.package = inputs.hyprland.packages.${pkgs.system}.hyprland; 
   programs.hyprland.xwayland.enable = true;
-
-  services.greetd = {
-    enable = true;
-    settings = {
-      initial_session = {
-        user = "enzo";
-        command = "$SHELL -l";
-      };
-    };
-  };
   
   environment.systemPackages = with pkgs; [
     home-manager

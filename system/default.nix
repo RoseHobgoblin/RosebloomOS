@@ -44,6 +44,16 @@ in
   programs.hyprland.enable = true;
   programs.hyprland.package = inputs.hyprland.packages.${pkgs.system}.hyprland; 
   programs.hyprland.xwayland.enable = true;
+
+  services.greetd = {
+    enable = true;
+    settings = {
+      initial_session = {
+        user = "enzo";
+        command = "$SHELL -l";
+      };
+    };
+  };
   
   environment.systemPackages = with pkgs; [
     home-manager

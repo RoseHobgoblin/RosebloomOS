@@ -12,6 +12,7 @@
     ./desktop/hyprland
     ./desktop/mako
     ./desktop/waybar
+    ./firefox
     ./foot
     ./neovim
     ./toolkit

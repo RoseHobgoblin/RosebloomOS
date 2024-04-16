@@ -53,7 +53,6 @@ in
     rosebloom-rebuild
     bloomshot
     libreoffice
-    #(callPackage ../modules/mercury/package.nix {})
     #(libsForQt5.callPackage ../zkanji/package.nix {})
   ];
 

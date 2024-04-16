@@ -15,13 +15,13 @@
     pcmanfm
     xarchiver
     #mkvtoolnix
-    #steam-run
+    steam-run
     gh
     cliphist
+    firefox
     #inkscape
     yt-dlp
     anki-bin
-    librewolf
     ungoogled-chromium
     microsoft-edge
     overskride
@@ -29,6 +29,5 @@
     gifsicle
     gnome.nautilus
     ranger
-    gradience
   ];
 }

@@ -8,6 +8,7 @@ in
 
 {
   imports = [
+    ./boot.nix
     ./greetd.nix
   ];
 
@@ -81,13 +82,7 @@ in
   #services.teamviewer.enable = true;
 
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  #boot.initrd.verbose = false;
-  #boot.consoleLogLevel = 0;
-  #boot.kernelParams = [ "quiet" "udev.log_level=0" ]; 
-  #boot.plymouth.enable = true;
-  #boot.plymouth.theme = "bgrt"; 
+
   
   time.timeZone = "Pacific/Auckland";
 

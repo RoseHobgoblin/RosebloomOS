@@ -1,16 +1,20 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }: { 
-  services.greetd = { let
-    session = {
-      user = "rosa";
-      command = "${lib.getExe config.programs.hyprland.package}";
-    }; in
+  services.greetd = {
     enable = true;
     settings = {
-      default_session = session;
-      initial_session = session;
+      default_session.command = ''
+      ${pkgs.greetd.tuigreet}/bin/tuigreet \
+      --time \
+      --asterisks \
+      --user-menu \
+      --cmd Hyprland
+      '';
     };
   };
+}
+

@@ -54,6 +54,12 @@ in
       };
     };
   };
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  };
   
   environment.systemPackages = with pkgs; [
     home-manager
@@ -65,6 +71,9 @@ in
     libreoffice
     #(libsForQt5.callPackage ../zkanji/package.nix {})
   ];
+
+  services.gvfs.enable = true; # Mount, trash, and other functionalities
+services.tumbler.enable = true; # Thumbnail support for images
 
   
   programs.zsh.enable = true;

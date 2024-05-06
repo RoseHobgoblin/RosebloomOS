@@ -5,7 +5,7 @@
   ...
 }: 
  {
-    imports = [./config.nix ./binds.nix ./env.nix];
+    imports = [./config.nix ./binds.nix ./env.nix ./hyprlock ];
   
     wayland.windowManager.hyprland = {
         enable = true;

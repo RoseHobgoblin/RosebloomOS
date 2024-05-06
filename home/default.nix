@@ -19,6 +19,7 @@
     ./starship
     ./vesktop
     ./zsh
+     inputs.hyprlock.homeManagerModules.default
   ];
   home.stateVersion = "24.05";
   programs.home-manager.enable = true;

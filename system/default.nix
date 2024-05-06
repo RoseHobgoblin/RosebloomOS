@@ -7,6 +7,11 @@ let
 in
 
 {
+  imports = [
+    ./boot.nix
+    ./greetd.nix
+  ];
+
   environment.etc = {
     "machine-id".source = "/nix/persist/etc/machine-id";
     "NetworkManager/system-connections".source = "/nix/persist/etc/NetworkManager/system-connections";
@@ -44,16 +49,6 @@ in
   programs.hyprland.enable = true;
   programs.hyprland.package = inputs.hyprland.packages.${pkgs.system}.hyprland; 
   programs.hyprland.xwayland.enable = true;
-
-  services.greetd = {
-    enable = true;
-    settings = {
-      initial_session = {
-        user = "enzo";
-        command = "$SHELL -l";
-      };
-    };
-  };
 
   programs.steam = {
     enable = true;
@@ -96,13 +91,7 @@ services.tumbler.enable = true; # Thumbnail support for images
   #services.teamviewer.enable = true;
 
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  #boot.initrd.verbose = false;
-  #boot.consoleLogLevel = 0;
-  #boot.kernelParams = [ "quiet" "udev.log_level=0" ]; 
-  #boot.plymouth.enable = true;
-  #boot.plymouth.theme = "bgrt"; 
+
   
   time.timeZone = "Pacific/Auckland";
 

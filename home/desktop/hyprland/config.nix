@@ -7,14 +7,14 @@
       "DP-3, 1280x1024, -1280x0, auto"
     ];
 
-      exec-once = [
-        "waybar"
-        "swaybg -o DP-1 -i RosebloomOS/theme/dark/16:9.png -o HDMI-A-1 -i RosebloomOS/theme/dark/16:9Blank.png -o DP-3 -i RosebloomOS/theme/dark/5:4.png"
-        "swaybg -o eDP-1 -i RosebloomOS/theme/dark/16:9.png"
-        "wl-paste --type text --watch cliphist store"
-        "wl-paste --type image --watch cliphist store"
-        "fcitx5"
-      ];
+    exec-once = [
+      "waybar"
+      "swaybg -o DP-1 -i RosebloomOS/theme/dark/16:9.png -o HDMI-A-1 -i RosebloomOS/theme/dark/16:9Blank.png -o DP-3 -i RosebloomOS/theme/dark/5:4.png"
+      "swaybg -o eDP-1 -i RosebloomOS/theme/dark/16:9.png"
+      "wl-paste --type text --watch cliphist store"
+      "wl-paste --type image --watch cliphist store"
+      "fcitx5"
+    ];
 
     input = {
       kb_layout = "us";
@@ -105,6 +105,8 @@
       "9,monitor:DP-3"
     ];
 
-    
+    misc = {
+      force_default_wallpaper = 0;
+    };
   };
 }

@@ -9,8 +9,10 @@
 
     exec-once = [
       "waybar"
-      "swaybg -o DP-1 -i RosebloomOS/theme/dark/16:9.png -o HDMI-A-1 -i RosebloomOS/theme/dark/16:9Blank.png -o DP-3 -i RosebloomOS/theme/dark/5:4.png"
-      "swaybg -o eDP-1 -i RosebloomOS/theme/dark/16:9.png"
+      #"swaybg -o DP-1 -i RosebloomOS/theme/dark/16:9.png -o HDMI-A-1 -i RosebloomOS/theme/dark/16:9Blank.png -o DP-3 -i RosebloomOS/theme/dark/5:4.png"
+      #"swaybg -o DP-1 -i RosebloomOS/assets/wallpaper/bay.JPG -o HDMI-A-1 -i RosebloomOS/assets/wallpaper/moon.jpg -o DP-3 -i RosebloomOS/assets/wallpaper/clouds.JPG"
+      "swaybg -o DP-1 -i RosebloomOS/assets/wallpaper/Untitled.png -o HDMI-A-1 -i RosebloomOS/assets/wallpaper/Untitled.png -o DP-3 -i RosebloomOS/assets/wallpaper/Untitled.png"
+      "swaybg -o eDP-1 -i RosebloomOS/assets/wallpaper/bay.JPG"
       "wl-paste --type text --watch cliphist store"
       "wl-paste --type image --watch cliphist store"
       "fcitx5"
@@ -34,7 +36,8 @@
           bar_text_size = 10;
           bar_text_font = "Tinos Nerd Font";
           bar_text_align = "centre";
-          bar_color = "rgb(0C0E14)";
+          bar_color = "rgb(191724)";
+          # bar_color = "rgb(faf4ed)"; # rose pine light
       };
     };
 
@@ -43,7 +46,8 @@
       gaps_out = "10";
       border_size = "2";
       #"col.active_border" = "rgb(5800E2) rgb(FF00E6)"; # sweet
-      "col.active_border" = "rgb(e0def4)"; # rose pine
+      "col.active_border" = "rgb(e0def4)" ; # rose pine
+      #"col.active_border" = "rgb(faf4ed)"; # rose pine light
       "col.inactive_border" = "rgb(191724)";
 
       layout = "dwindle";
@@ -57,6 +61,7 @@
         size = "3";
         passes = "1";
       };
+        rounding = 10;
 
       drop_shadow = "yes";
       shadow_range = "4";

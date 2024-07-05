@@ -12,12 +12,19 @@
     #theme.package = pkgs.adw-gtk3;
     #theme.name = "Sweet-Dark";
     #theme.package = pkgs.sweet;
-     theme.name = "Colloid-Dark";
-     theme.package = pkgs.colloid-gtk-theme.override {
-         colorVariants = ["dark"];
-         themeVariants = ["purple"];
-         #sizeVariants = [""];
-       };
+
+    #icon theme names are "Rose-Pine-Moon" and "Rose-Pine"
+    #theme names are "RosePine-Main-B-LB", "RosePine-Main-B", "RosePine-Main-BL-LB" and "RosePine-Main-BL"
+    theme.name = "RosePine-Main-B-LB";
+    theme.package = (pkgs.callPackage ./rose-pine.nix {}).gtk-theme;
+
+    #  theme.name = "Colloid-Dark";
+    #  theme.package = pkgs.colloid-gtk-theme.override {
+    #      colorVariants = ["dark"];
+    #      themeVariants = ["purple"];
+    #      #sizeVariants = [""];
+    #    };
+    
      cursorTheme = {
       name = "Sweet-cursors";
       size = 16;

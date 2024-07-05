@@ -9,6 +9,7 @@
      #efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
      device = "nodev";
      useOSProber = true;
+     configurationLimit = 3;
   };
 };
 #  boot.loader.grub.efiSupport = true;

@@ -17,6 +17,8 @@
     #theme names are "RosePine-Main-B-LB", "RosePine-Main-B", "RosePine-Main-BL-LB" and "RosePine-Main-BL"
     theme.name = "RosePine-Main-B-LB";
     theme.package = (pkgs.callPackage ./rose-pine.nix {}).gtk-theme;
+    iconTheme.name = "Rose-Pine";
+    iconTheme.package = (pkgs.callPackage ./rose-pine.nix {}).gtk-theme;
 
     #  theme.name = "Colloid-Dark";
     #  theme.package = pkgs.colloid-gtk-theme.override {
@@ -30,8 +32,8 @@
       size = 16;
       package = pkgs.sweet-nova;
     };
-    iconTheme.name = "candy-icons";
-    iconTheme.package = pkgs.candy-icons;
+    #iconTheme.name = "candy-icons";
+    #iconTheme.package = pkgs.candy-icons;
   };
 
   qt = {

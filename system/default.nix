@@ -36,12 +36,10 @@ in
     packages = with pkgs; [
       openmoji-color
       (nerdfonts.override { fonts = [ "MPlus" ]; })
-      (nerdfonts.override { fonts = [ "Tinos" ]; })
       roboto
       roboto-slab
       mplus-outline-fonts.githubRelease
-      babelstone-han
-      quinze
+      victor-mono
     ];
     fontconfig = {
       enable = true;
@@ -54,10 +52,6 @@ in
   };
 
   programs.dconf.enable = true;
-
-  #programs.hyprland.enable = true;
-  #programs.hyprland.package = inputs.hyprland.packages.${pkgs.system}.hyprland; 
-  #programs.hyprland.xwayland.enable = true;
 
   programs.steam = {
     enable = true;
@@ -77,15 +71,14 @@ in
     wgnord
     (callPackage ../modules/ammo/package.nix {})
     protontricks
-    gnome.zenity
+    zenity
     p7zip
     #(libsForQt5.callPackage ../zkanji/package.nix {})
   ];
 
   services.gvfs.enable = true; # Mount, trash, and other functionalities
-services.tumbler.enable = true; # Thumbnail support for images
+  services.tumbler.enable = true; # Thumbnail support for images
 
-  
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
@@ -109,6 +102,7 @@ services.tumbler.enable = true; # Thumbnail support for images
 
   
   time.timeZone = "Pacific/Auckland";
+  time.hardwareClockInLocalTime = true;
 
   security.rtkit.enable = true;
   security.polkit.enable = true;

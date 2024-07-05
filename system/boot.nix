@@ -1,7 +1,16 @@
 { config, pkgs, lib, ... }: 
 {
- boot.loader.systemd-boot.enable = true;
- boot.loader.efi.canTouchEfiVariables = true;
+ boot.loader = {
+  efi = {
+    canTouchEfiVariables = true;
+  };
+  grub = {
+     efiSupport = true;
+     #efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
+     device = "nodev";
+     useOSProber = true;
+  };
+};
 #  boot.loader.grub.efiSupport = true;
 #  boot.loader.grub.device = "nodev";
 

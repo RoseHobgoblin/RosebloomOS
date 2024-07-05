@@ -37,3 +37,11 @@
       font-family: "M+1 Nerd Font";
     }
   ''
+    # sweet
+    #   window#waybar {
+    #   background: rgb(12, 14, 20);
+    #   color: rgb(195, 199, 209);
+    # }
+    # #network.ethernet {
+    #   color: rgb(199, 77, 237); 
+    # }

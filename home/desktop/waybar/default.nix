@@ -111,12 +111,14 @@
 
   xdg.configFile."waybar/modules.json".text = builtins.toJSON {
     "battery" = {
-      format-charging = ''<span foreground="#c4a7e7">BATTERY </span>{capacity:3}%'';
+      format-charging = ''<span foreground="#c4a7e7">BATTERY </span>{capacity:3}%''; # rose pine
+      #format-charging = ''<span foreground="#C74DED">BATTERY </span>{capacity:3}%''; # sweet
       format = ''<span foreground="#e0def4">BATTERY </span>{capacity:3}%'';
     };
 
     "wireplumber" = {
-      format = ''<span foreground="#c4a7e7">VOLUME </span>{volume:3}%'';
+      format = ''<span foreground="#c4a7e7">VOLUME </span>{volume:3}%''; # rose pine
+      #format = ''<span foreground="#C74DED">VOLUME </span>{volume:3}%''; # sweet
       format-muted = ''VOLUME {volume:3}%'';
       max-volume = "150";
       scroll-step = "0.2";

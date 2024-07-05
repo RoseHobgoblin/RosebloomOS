@@ -32,9 +32,9 @@
       hyprbars = {
           bar_height = 20;
           bar_text_size = 10;
-          bar_text_font = "M+1 Nerd Font";
+          bar_text_font = "Tinos Nerd Font";
           bar_text_align = "centre";
-          bar_color = "rgb(e0def4)";
+          bar_color = "rgb(0C0E14)";
       };
     };
 
@@ -42,7 +42,8 @@
       gaps_in = "5";
       gaps_out = "10";
       border_size = "2";
-      "col.active_border" = "rgb(e0def4)";
+      #"col.active_border" = "rgb(5800E2) rgb(FF00E6)"; # sweet
+      "col.active_border" = "rgb(e0def4)"; # rose pine
       "col.inactive_border" = "rgb(191724)";
 
       layout = "dwindle";
@@ -86,7 +87,7 @@
     };
 
     master = {
-      new_is_master = "true";
+      new_status = "master";
     };
 
     gestures = {

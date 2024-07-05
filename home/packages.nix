@@ -27,7 +27,6 @@
     overskride
     ffmpeg
     gifsicle
-    gnome.nautilus
     ranger
   ];
 }

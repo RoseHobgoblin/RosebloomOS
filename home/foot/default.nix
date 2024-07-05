@@ -18,7 +18,7 @@
 	      blink = true;
       };
 
-      colors = {
+      colors = { # Rose Pine Colours
         background = "191724";
         foreground = "e0def4";
 
@@ -40,7 +40,29 @@
         bright6 = "ebbcba";
         bright7 = "e0def4";
       };
-      key-bindings.search-start = "Control+Shift+f";
+      # colors = { # Sweet Colours 161925
+      #   background = "0C0E14";
+      #   foreground = "c3c7d1";
+
+      #   regular0 = "282c34";
+      #   regular1 = "ed254e";
+      #   regular2 = "71f79f";
+      #   regular3 = "f9dc5c";  
+      #   regular4 = "7cb7ff"; 
+      #   regular5 = "c74ded";
+      #   regular6 = "00c1e4";
+      #   regular7 = "dcdcdd"; 
+
+      #   bright0 = "282c34";
+      #   bright1 = "ed254e";
+      #   bright2 = "71f79f";
+      #   bright3 = "f9dc5c";
+      #   bright4 = "7cb7ff";
+      #   bright5 = "c74ded";
+      #   bright6 = "00c1e4";
+      #   bright7 = "dcdcdd";
+      # };
+       key-bindings.search-start = "Control+Shift+f";
     };
   };
 }

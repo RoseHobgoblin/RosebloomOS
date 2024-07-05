@@ -15,6 +15,7 @@ in
   environment.etc = {
     "machine-id".source = "/nix/persist/etc/machine-id";
     "NetworkManager/system-connections".source = "/nix/persist/etc/NetworkManager/system-connections";
+    "wireguard".source = "/nix/persist/etc/wireguard";
   };
   
   nixpkgs.config.allowUnfree = true;
@@ -35,20 +36,28 @@ in
     packages = with pkgs; [
       openmoji-color
       (nerdfonts.override { fonts = [ "MPlus" ]; })
+      (nerdfonts.override { fonts = [ "Tinos" ]; })
       roboto
       roboto-slab
+      mplus-outline-fonts.githubRelease
+      babelstone-han
+      quinze
     ];
     fontconfig = {
+      enable = true;
       defaultFonts = {
-        serif = [ "M+1 Nerd Font" ];
+        sansSerif = ["Rounded Mplus 1c ExtraBold"];
+        serif = [ "Rounded Mplus 1c ExtraBold" ];
         emoji = [ "OpenMoji Color" ];
       };
     };
   };
 
-  programs.hyprland.enable = true;
-  programs.hyprland.package = inputs.hyprland.packages.${pkgs.system}.hyprland; 
-  programs.hyprland.xwayland.enable = true;
+  programs.dconf.enable = true;
+
+  #programs.hyprland.enable = true;
+  #programs.hyprland.package = inputs.hyprland.packages.${pkgs.system}.hyprland; 
+  #programs.hyprland.xwayland.enable = true;
 
   programs.steam = {
     enable = true;
@@ -64,6 +73,12 @@ in
     rosebloom-rebuild
     bloomshot
     libreoffice
+    wineWowPackages.stable
+    wgnord
+    (callPackage ../modules/ammo/package.nix {})
+    protontricks
+    gnome.zenity
+    p7zip
     #(libsForQt5.callPackage ../zkanji/package.nix {})
   ];
 

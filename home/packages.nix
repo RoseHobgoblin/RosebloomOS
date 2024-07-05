@@ -4,7 +4,7 @@
     wofi 
     vscodium 
     git 
-    pavucontrol 
+    pavucontrol
     swaybg
     viewnior
     gimp
@@ -24,7 +24,6 @@
     anki-bin
     ungoogled-chromium
     microsoft-edge
-    overskride
     ffmpeg
     gifsicle
     ranger

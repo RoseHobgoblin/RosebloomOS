@@ -11,8 +11,8 @@
       "waybar"
       #"swaybg -o DP-1 -i RosebloomOS/theme/dark/16:9.png -o HDMI-A-1 -i RosebloomOS/theme/dark/16:9Blank.png -o DP-3 -i RosebloomOS/theme/dark/5:4.png"
       #"swaybg -o DP-1 -i RosebloomOS/assets/wallpaper/bay.JPG -o HDMI-A-1 -i RosebloomOS/assets/wallpaper/moon.jpg -o DP-3 -i RosebloomOS/assets/wallpaper/clouds.JPG"
-      "swaybg -o DP-1 -i RosebloomOS/assets/wallpaper/Untitled.png -o HDMI-A-1 -i RosebloomOS/assets/wallpaper/Untitled.png -o DP-3 -i RosebloomOS/assets/wallpaper/Untitled.png"
-      "swaybg -o eDP-1 -i RosebloomOS/assets/wallpaper/bay.JPG"
+      "swaybg -o DP-1 -i RosebloomOS/theme/dark/SolidRose.png -o HDMI-A-1 -i RosebloomOS/theme/dark/SolidRose.png -o DP-3 -i RosebloomOS/theme/dark/SolidRose.png"
+      "swaybg -o eDP-1 -i RosebloomOS/theme/dark/SolidRose.png"
       "wl-paste --type text --watch cliphist store"
       "wl-paste --type image --watch cliphist store"
       "fcitx5"
@@ -32,11 +32,12 @@
 
     plugin = {
       hyprbars = {
-          bar_height = 20;
+          bar_height = 30;
           bar_text_size = 10;
-          bar_text_font = "Tinos Nerd Font";
-          bar_text_align = "centre";
+          bar_text_font = "Victor Mono Italic";
+          bar_text_align = "left";
           bar_color = "rgb(191724)";
+          bar_precedence_over_border = "yes";
           # bar_color = "rgb(faf4ed)"; # rose pine light
       };
     };
@@ -61,7 +62,7 @@
         size = "3";
         passes = "1";
       };
-        rounding = 10;
+      #rounding = 10;
 
       drop_shadow = "yes";
       shadow_range = "4";

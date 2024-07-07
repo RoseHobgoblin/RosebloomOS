@@ -1,15 +1,18 @@
-{ lib, pkgs, inputs, ... }: 
-
-
+{ 
+  lib,
+  pkgs,
+  inputs, 
+  ... 
+}: 
 let
   bloomshot = import ../modules/scripts/bloomshot.nix {inherit pkgs; };
   rosebloom-rebuild = import ../modules/scripts/rosebloom-rebuild.nix {inherit pkgs; };
 in
-
 {
   imports = [
     ./boot.nix
     ./greetd.nix
+    ./packages.nix
   ];
 
   environment.etc = {
@@ -59,22 +62,7 @@ in
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
   
-  environment.systemPackages = with pkgs; [
-    home-manager
-    neovim
-    git
-    libnotify
-    rosebloom-rebuild
-    bloomshot
-    libreoffice
-    wineWowPackages.stable
-    wgnord
-    (callPackage ../modules/ammo/package.nix {})
-    protontricks
-    zenity
-    p7zip
-    #(libsForQt5.callPackage ../zkanji/package.nix {})
-  ];
+
 
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images

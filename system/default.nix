@@ -84,11 +84,6 @@ in
 
   networking.networkmanager.enable = true;
 
-  #services.teamviewer.enable = true;
-
-
-
-  
   time.timeZone = "Pacific/Auckland";
   time.hardwareClockInLocalTime = true;
 

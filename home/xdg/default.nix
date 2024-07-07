@@ -15,10 +15,5 @@
       #   XDG_WALLPAPERS_DIR = "${config.home.homeDirectory}/Pictures/Wallpapers";
       # };
     };
-    configFile = {
-        "Kvantum/kvantum.kvconfig".source = (pkgs.formats.ini {}).generate "kvantum.kvconfig" {
-        General.theme = "Sweet";
-      };
-    };
   };
 }

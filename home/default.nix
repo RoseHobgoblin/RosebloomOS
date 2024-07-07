@@ -17,7 +17,7 @@
     ./neovim
     ./toolkit
     ./starship
-    #./xdg
+    ./xdg
     ./vesktop
     ./zsh
   ];

@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   # credits: neoney
-  #xdg.configFile."VencordDesktop/VencordDesktop/themes/Catppuccin.theme.css".source = ./theme.css;
+  xdg.configFile."vesktop/themes/RosePine.theme.css".source = ./theme.css;
   home.packages = [
     (pkgs.vesktop.overrideAttrs (old: {
       patches = (old.patches or [ ]) ++ [ ./__readonlyFix.patch ];
@@ -29,7 +29,7 @@
     autoUpdateNotification = false;
     useQuickCss = true;
     themeLinks = [];
-    enabledThemes = [""];
+    enabledThemes = ["RosePine.theme.css"];
     enableReactDevtools = true;
     frameless = false;
     transparent = false;
@@ -81,6 +81,7 @@
       GifPaste.enabled = false;
       HideAttachments.enabled = false;
       iLoveSpam.enabled = false;
+      ImplicitRelationships.enabled = true;
       IgnoreActivities.enabled = false;
       ImageZoom.enabled = true;
       InvisibleChat.enabled = false;

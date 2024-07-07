@@ -1,3 +1,5 @@
 {
-  home.configFile."fcitx5/conf/classicalui.conf
+  xdg.configFile."fcitx5/conf/classicui.conf" = {
+    text = "Theme=rose-pine";
+  };
 }

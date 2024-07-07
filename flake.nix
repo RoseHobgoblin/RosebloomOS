@@ -32,9 +32,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    firefox-gnome-theme = { url = "github:rafaelmardojai/firefox-gnome-theme"; flake = false; };
+    # firefox-gnome-theme = { url = "github:rafaelmardojai/firefox-gnome-theme"; flake = false; };
     
-    firefox-sweet-theme = { url = "github:EliverLara/firefox-sweet-theme"; flake = false; };
+    # firefox-sweet-theme = { url = "github:EliverLara/firefox-sweet-theme"; flake = false; };
+
+    #simplefox = { url = "github:migueravila/SimpleFox"; flake = false; }; 
   
   };
 

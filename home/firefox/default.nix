@@ -12,6 +12,12 @@
     # target = ".mozilla/firefox/roseuser/chrome/firefox-sweet-theme";
     # source = inputs.firefox-sweet-theme;
     #};
+
+    # file."simplefox" = {
+    #   target = ".mozilla/firefox/roseuser/chrome/simplefox";
+    #   source = inputs.simplefox;
+    # };
+    
   };
 
   programs.firefox = {
@@ -31,6 +37,8 @@
         "widget.gtk.rounded-bottom-corners.enabled" = true;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         "svg.context-properties.content.enabled" = true;
+        "layers.acceleration.force-enabled" = true;
+        "gfx.webrender.all" = true;
         # "gnomeTheme.hideSingleTab" = false;
         # "gnomeTheme.bookmarksToolbarUnderTabs" = true;
         # "gnomeTheme.normalWidthTabs" = false;
@@ -54,11 +62,25 @@
       search.force = true;
 
       # userChrome = ''
+      #   @import "firefox-gnome-theme/userChrome.css";
+      # '';
+      # userContent = ''
+      #   @import "firefox-gnome-theme/userContent.css";
+      # '';
+
+      # userChrome = ''
       #   @import "firefox-sweet-theme/userChrome.css";
       # '';
       # userContent = ''
-      #   @import "firefox-sweet-themetheme/userContent.css";
+      #   @import "firefox-sweet-theme/userContent.css";
       # '';
+
+      #  userChrome = ''
+      #    @import "simplefox/chrome/userChrome.css";
+      #  '';
+      #  userContent = ''
+      #    @import "simplefox/chrome/userContent.css";
+      #  '';
     };
   };
 }

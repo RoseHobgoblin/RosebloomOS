@@ -11,6 +11,7 @@
     #./desktop/ags
     ./desktop/hyprland
     ./desktop/mako
+    #./desktop/swww
     ./desktop/waybar
     ./fcitx5
     ./firefox

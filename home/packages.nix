@@ -18,7 +18,6 @@
     steam-run
     gh
     cliphist
-    firefox
     #inkscape
     yt-dlp
     anki-bin

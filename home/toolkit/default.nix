@@ -13,14 +13,14 @@
 
     #icon theme names are "Rose-Pine-Moon" and "Rose-Pine"
     #theme names are "RosePine-Main-B-LB", "RosePine-Main-B", "RosePine-Main-BL-LB" and "RosePine-Main-BL"
-    theme.name = "RosePine-Main-B-LB";
+    theme.name = "RosePine-Main-B";
     theme.package = (pkgs.callPackage ./rose-pine.nix {}).gtk-theme;
     iconTheme.name = "Rose-Pine";
     iconTheme.package = (pkgs.callPackage ./rose-pine.nix {}).gtk-theme;
-    cursorTheme = {
-      name = "BreezeX-RosePine-Linux";
-      package = pkgs.rose-pine-cursor;
-    };
+    #cursorTheme = {
+    #  name = "BreezeX-RosePine-Linux";
+    #  package = pkgs.rose-pine-cursor;
+    #};
 
     #  theme.name = "Colloid-Dark";
     #  theme.package = pkgs.colloid-gtk-theme.override {

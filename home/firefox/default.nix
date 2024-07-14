@@ -25,6 +25,7 @@
     profiles.roseuser = {
       name = "Roseuser";
       extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+        multi-account-containers
         bitwarden
         duckduckgo-privacy-essentials
         return-youtube-dislikes
@@ -39,13 +40,6 @@
         "svg.context-properties.content.enabled" = true;
         "layers.acceleration.force-enabled" = true;
         "gfx.webrender.all" = true;
-        # "gnomeTheme.hideSingleTab" = false;
-        # "gnomeTheme.bookmarksToolbarUnderTabs" = true;
-        # "gnomeTheme.normalWidthTabs" = false;
-        # "gnomeTheme.tabsAsHeaderbar" = false;
-        # GTK Theme
-        #"browser.tabs.drawInTitlebar" = true;
-        #"extensions.activeThemeID" = "firefox-compact@mozilla.org";
 
         ## Other
         "browser.toolbars.bookmarks.visibility" = "never";

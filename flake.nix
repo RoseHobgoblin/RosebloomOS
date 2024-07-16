@@ -22,10 +22,10 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
-    #hy3 = {
+    # hy3 = {
     #  url = "github:outfoxxed/hy3";
     #  inputs.hyprland.follows = "hyprland";
-    #};
+    # };
 
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
@@ -33,10 +33,9 @@
     };
     
     # firefox-gnome-theme = { url = "github:rafaelmardojai/firefox-gnome-theme"; flake = false; };
-    
     # firefox-sweet-theme = { url = "github:EliverLara/firefox-sweet-theme"; flake = false; };
-
-    #simplefox = { url = "github:migueravila/SimpleFox"; flake = false; }; 
+    # simplefox = { url = "github:migueravila/SimpleFox"; flake = false; }; 
+    # firefox-cascade = { url = "github:andreasgrafen/cascade/main"; flake = false; };
   
   };
 

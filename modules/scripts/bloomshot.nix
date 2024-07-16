@@ -22,5 +22,5 @@ esac
 
 cat "$filesaving" | wl-copy --type image/png
 notify-send "Screenshot captured" -t 2000
-${pkgs.sox}/bin/play ~/.dotfiles/assets/sounds/screenshot.mp3
+${pkgs.sox}/bin/play ~/RosebloomOS/theme/assets/sounds/screenshot.mp3
 ''

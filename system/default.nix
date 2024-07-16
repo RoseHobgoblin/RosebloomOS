@@ -4,10 +4,6 @@
   inputs, 
   ... 
 }: 
-let
-  bloomshot = import ../modules/scripts/bloomshot.nix {inherit pkgs; };
-  rosebloom-rebuild = import ../modules/scripts/rosebloom-rebuild.nix {inherit pkgs; };
-in
 {
   imports = [
     ./boot.nix

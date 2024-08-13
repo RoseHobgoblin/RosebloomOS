@@ -9,7 +9,7 @@
     backgroundColor = "#1f1d2e";
     font = "M+1 Nerd Font 10";
     textColor = "#e0def4";
-    borderColor = "#eb6f92";
+    borderColor = "#524f67";
     borderSize = 1;
     width = 400;
     height = 600;

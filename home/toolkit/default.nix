@@ -13,7 +13,7 @@
 
     #icon theme names are "Rose-Pine-Moon" and "Rose-Pine"
     #theme names are "RosePine-Main-B-LB", "RosePine-Main-B", "RosePine-Main-BL-LB" and "RosePine-Main-BL"
-    theme.name = "RosePine-Main-B";
+    theme.name = "RosePine-Main-BL";
     theme.package = (pkgs.callPackage ./rose-pine.nix {}).gtk-theme;
     iconTheme.name = "Rose-Pine";
     iconTheme.package = (pkgs.callPackage ./rose-pine.nix {}).gtk-theme;
@@ -22,11 +22,11 @@
     #  package = pkgs.rose-pine-cursor;
     #};
 
-    #  theme.name = "Colloid-Dark";
+    #  theme.name = "Colloid-Purple-Dark";
     #  theme.package = pkgs.colloid-gtk-theme.override {
     #      colorVariants = ["dark"];
     #      themeVariants = ["purple"];
-    #      #sizeVariants = [""];
+    #      sizeVariants = ["standard"];
     #    };
     
     #theme.name = "Sweet-Dark";

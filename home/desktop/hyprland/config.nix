@@ -34,24 +34,43 @@
 
     plugin = {
       hyprbars = {
-          bar_height = 30;
-          bar_text_size = 10;
-          bar_text_font = "Victor Mono Italic";
-          bar_text_align = "left";
-          bar_color = "rgb(191724)";
-          bar_precedence_over_border = "yes";
-          # bar_color = "rgb(faf4ed)"; # rose pine light
+        bar_height = 25;
+        bar_text_size = 10;
+        "col.text" = "rgb(e0def4)";
+        bar_text_font = "Victor Mono Bold Italic";
+        bar_text_align = "left";
+        bar_color = "rgb(26233a)"; # rose pine
+        # bar_color = "rgb(f2e9e1)"; # rose pine dawn
+        # bar_precedence_over_border = "yes";
+        # hyprbars-button = [
+        #   "rgb(26233a), 20, ◬, hyprctl dispatch killactive"
+        #   "rgb(26233a), 20,▽, hyprctl dispatch fullscreen 1"
+        # ];
       };
+      # borders-plus-plus = {
+      #   add_borders = 1;
+          
+      #   bar_color = "rgb(191724)";
+
+      #   border_size_1 = 2;
+
+      #   natural_rounding = "yes";
+      # };
     };
 
     general = {
       gaps_in = "5";
       gaps_out = "10";
-      border_size = "2";
-      #"col.active_border" = "rgb(5800E2) rgb(FF00E6)"; # sweet
-      "col.active_border" = "rgb(e0def4)" ; # rose pine
-      #"col.active_border" = "rgb(faf4ed)"; # rose pine light
-      "col.inactive_border" = "rgb(191724)";
+      border_size = "1";
+      "col.active_border" = "rgb(524f67)" ; # rose pine
+      "col.inactive_border" = "rgb(403d52)"; # rose pine
+
+      # "col.active_border" = "rgb(26233a)" ; # rose pine
+      # "col.inactive_border" = "rgb(26233a)"; # rose pine
+      # "col.active_border" = "rgb(f2e9e1)"; # rose pine dawn
+      # "col.inactive_border" = "rgb(f2e9e1)"; # rose pine dawn
+      # "col.active_border" = "rgb(5800E2) rgb(FF00E6)"; # sweet
+      # "col.inactive_border" = "rgb(5800E2) rgb(FF00E6)"; # sweet
 
       layout = "dwindle";
 
@@ -64,9 +83,9 @@
         size = "3";
         passes = "1";
       };
-      #rounding = 10;
+      #rounding = 8;
 
-      drop_shadow = "yes";
+      drop_shadow = "true";
       shadow_range = "4";
       shadow_render_power = "3";
       "col.shadow" = "rgba(1a1a1aee)";

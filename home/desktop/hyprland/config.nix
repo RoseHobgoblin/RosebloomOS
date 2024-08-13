@@ -13,10 +13,8 @@
 
     exec-once = [
       "waybar"
-      #"swaybg -o DP-1 -i RosebloomOS/theme/dark/16:9.png -o HDMI-A-1 -i RosebloomOS/theme/dark/16:9Blank.png -o DP-3 -i RosebloomOS/theme/dark/5:4.png"
-      #"swaybg -o DP-1 -i RosebloomOS/assets/wallpaper/bay.JPG -o HDMI-A-1 -i RosebloomOS/assets/wallpaper/moon.jpg -o DP-3 -i RosebloomOS/assets/wallpaper/clouds.JPG"
-      "swaybg -o DP-1 -i RosebloomOS/theme/dark/SolidRose.png -o HDMI-A-1 -i RosebloomOS/theme/dark/SolidRose.png -o DP-3 -i RosebloomOS/theme/dark/SolidRose.png"
-      "swaybg -o eDP-1 -i RosebloomOS/theme/dark/SolidRose.png"
+      "swaybg -o DP-1 -i RosebloomOS/theme/IrisGradient.png -o HDMI-A-1 -i RosebloomOS/theme/IrisGradient.png -o DP-3 -i RosebloomOS/theme/IrisGradient.png"
+      "swaybg -o eDP-1 -i RosebloomOS/theme/IrisGradient.png"
       "wl-paste --type text --watch cliphist store"
       "wl-paste --type image --watch cliphist store"
       "fcitx5"

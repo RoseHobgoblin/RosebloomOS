@@ -39,12 +39,13 @@
       roboto-slab
       mplus-outline-fonts.githubRelease
       victor-mono
+      i-dot-ming
     ];
     fontconfig = {
       enable = true;
       defaultFonts = {
-        sansSerif = ["Rounded Mplus 1c ExtraBold"];
-        serif = [ "Rounded Mplus 1c ExtraBold" ];
+        sansSerif = ["M PLUS 1"];
+        serif = [ "M PLUS 1" ];
         emoji = [ "OpenMoji Color" ];
       };
     };

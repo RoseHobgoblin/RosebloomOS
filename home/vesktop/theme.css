@@ -8,7 +8,6 @@
 * @updateUrl https://github.com/rose-pine/discord/blob/rose-pine.theme.css
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 :root {
 --Chat-Font-Used: 'M+1 Nerd Font';
 --Chat-Font-Size: 12px;

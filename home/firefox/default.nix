@@ -75,6 +75,17 @@
       #  userContent = ''
       #    @import "simplefox/chrome/userContent.css";
       #  '';
+
+      #  userChrome = ''
+      #    @import '${inputs.firefox-cascade}/chrome/includes/cascade-config.css';
+      #    @import '${inputs.firefox-cascade}/chrome/includes/cascade-colours.css';
+      #    @import '${inputs.firefox-cascade}/chrome/includes/cascade-layout.css';
+      #    @import '${inputs.firefox-cascade}/chrome/includes/cascade-responsive.css';
+      #    @import '${inputs.firefox-cascade}/chrome/includes/cascade-floating-panel.css';
+      #    @import '${inputs.firefox-cascade}/chrome/includes/cascade-nav-bar.css';
+      #    @import '${inputs.firefox-cascade}/chrome/includes/cascade-tabs.css';
+      #    @import '${inputs.firefox-cascade}/integrations/rose-pine/cascade-rose-pine.css';
+      #  '';
     };
   };
 }

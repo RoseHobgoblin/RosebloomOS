@@ -58,8 +58,6 @@
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
-  
-
 
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
@@ -78,6 +76,8 @@
       };
     };
   };
+
+  programs.kdeconnect.enable = true;
 
   networking.networkmanager.enable = true;
 

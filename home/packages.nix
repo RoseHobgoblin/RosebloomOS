@@ -26,5 +26,6 @@
     ffmpeg
     gifsicle
     ranger
+    prismlauncher
   ];
 }

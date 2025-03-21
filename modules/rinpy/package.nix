@@ -1,11 +1,13 @@
 { lib
 , python3Packages
 , fetchFromGitHub
+, zlib
+, autoPatchelfHook
 ,
 }:
 
 python3Packages.buildPythonApplication rec {
-  pname = "ammo";
+  pname = "rinpy";
   version = "0.1.0"; 
   src = fetchFromGitHub {
     owner = "Ydmir";
@@ -14,14 +16,19 @@ python3Packages.buildPythonApplication rec {
     sha256 = "1h96jcd706vzbwdpjra17ninjwdp5k4zry1casz55fpc7y21rndz";
   };
 
-    pkgs.mkShell {
-    nativeBuildInputs = with pkgs; [
+  propagatedBuildInputs = with python3Packages; [
+    numpy
+  ];
+
+
+    nativeBuildInputs = [
     	autoPatchelfHook
     ];
-    buildInputs = with pkgs; [
+
+    buildInputs = [
     	zlib
     ];
-}
+    
 
   meta = with lib; {
     description = "A Simple Terminal-Based Mod Organizer for Linux"; 

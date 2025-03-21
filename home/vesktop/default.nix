@@ -2,15 +2,16 @@
   # credits: neoney
   xdg.configFile."vesktop/themes/RosePine.theme.css".source = ./theme.css;
   home.packages = [
-    (pkgs.vesktop.overrideAttrs (old: {
-      patches = (old.patches or [ ]) ++ [ ./__readonlyFix.patch ];
-      postFixup =
-        old.postFixup
-        + ''
-          wrapProgram $out/bin/vesktop \
-            --add-flags "--enable-features=UseOzonePlatform --ozone-platform=wayland --enable-accelerated-mjpeg-decode --enable-accelerated-video --ignore-gpu-blacklist --enable-native-gpu-memory-buffers --enable-gpu-rasterization --enable-gpu --enable-features=WebRTCPipeWireCapturer --enable-wayland-ime"
-        '';
-    }))
+  pkgs.vesktop
+#    (pkgs.vesktop.overrideAttrs (old: {
+ #     patches = (old.patches or [ ]) ++ [ ./__readonlyFix.patch ];
+  #    postFixup =
+  #      old.postFixup
+  #      + ''
+#          wrapProgram $out/bin/vesktop \
+ #           --add-flags "--enable-features=UseOzonePlatform --ozone-platform=wayland --enable-accelerated-mjpeg-decode --enable-accelerated-video --ignore-gpu-blacklist --enable-native-gpu-memory-buffers --enable-gpu-rasterization --enable-gpu --enable-features=WebRTCPipeWireCapturer --enable-wayland-ime"
+  #      '';
+  #  }))
   ];
 
   xdg.configFile."vesktop/settings.json".text = builtins.toJSON {

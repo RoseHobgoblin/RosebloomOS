@@ -4,6 +4,7 @@
   inputs, 
   ... 
 }: 
+
 {
   imports = [
     ./boot.nix
@@ -34,7 +35,7 @@
     enableDefaultPackages = true;
     packages = with pkgs; [
       openmoji-color
-      (nerdfonts.override { fonts = [ "MPlus" ]; })
+      nerd-fonts.mplus
       roboto
       roboto-slab
       mplus-outline-fonts.githubRelease
@@ -58,6 +59,7 @@
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
+
 
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images

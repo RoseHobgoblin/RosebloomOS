@@ -2,7 +2,7 @@
   description = "A floral derivation of NixOS.";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     
     # User repo
     nur.url = "github:nix-community/NUR";

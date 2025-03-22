@@ -24,7 +24,7 @@
     enable = true;
     profiles.roseuser = {
       name = "Roseuser";
-      extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+      extensions.packages = with inputs.firefox-addons.packages."x86_64-linux"; [
         multi-account-containers
         bitwarden
         duckduckgo-privacy-essentials
@@ -52,7 +52,7 @@
         "network.auth.subresource-http-auth-allow" = 1;
         "editor.truncate_user_pastes" = false;
       };
-      search.default = "DuckDuckGo";
+      search.default = "ddg";
       search.force = true;
 
       # userChrome = ''

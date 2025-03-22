@@ -27,5 +27,7 @@
     gifsicle
     ranger
     prismlauncher
+    palemoon-bin
+
   ];
 }

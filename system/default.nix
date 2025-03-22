@@ -41,6 +41,9 @@
       mplus-outline-fonts.githubRelease
       victor-mono
       i-dot-ming
+      tamsyn
+      nerd-fonts.code-new-roman
+      timesnew
     ];
     fontconfig = {
       enable = true;
@@ -82,6 +85,7 @@
   programs.kdeconnect.enable = true;
 
   networking.networkmanager.enable = true;
+  networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
 
   time.timeZone = "Pacific/Auckland";
   time.hardwareClockInLocalTime = true;

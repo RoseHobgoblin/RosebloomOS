@@ -13,7 +13,7 @@
 
     exec-once = [
       "waybar"
-      "swaybg -o DP-1 -i RosebloomOS/theme/IrisGradient.png -o HDMI-A-1 -i RosebloomOS/theme/IrisGradient.png -o DP-3 -i RosebloomOS/theme/IrisGradient.png"
+      "swaybg -o DP-1 -i RosebloomOS/theme/light/ACHTUNG.png -o HDMI-A-1 -i RosebloomOS/theme/light/ACHTUNG.png -o DP-3 -i RosebloomOS/theme/light/ACHTUNG.png"
       "swaybg -o eDP-1 -i RosebloomOS/theme/IrisGradient.png"
       "wl-paste --type text --watch cliphist store"
       "wl-paste --type image --watch cliphist store"
@@ -36,34 +36,35 @@
       hyprbars = {
         bar_height = 25;
         bar_text_size = 10;
-        "col.text" = "rgb(e0def4)";
-        bar_text_font = "Victor Mono Bold Italic";
+        "col.text" = "rgb(FFFFFF)";
+        #bar_text_font = "Victor Mono Bold Italic";
         bar_text_align = "left";
-        bar_color = "rgb(26233a)"; # rose pine
+        bar_color = "rgb(FF0000)"; # signalis
+        #bar_color = "rgb(26233a)"; # rose pine
         # bar_color = "rgb(f2e9e1)"; # rose pine dawn
-        # bar_precedence_over_border = "yes";
-        # hyprbars-button = [
-        #   "rgb(26233a), 20, ◬, hyprctl dispatch killactive"
-        #   "rgb(26233a), 20,▽, hyprctl dispatch fullscreen 1"
-        # ];
+        #bar_precedence_over_border = "yes";
+         hyprbars-button = [
+           "rgb(FF0000), 20, ◬, hyprctl dispatch killactive"
+           "rgb(FF0000), 20,▽, hyprctl dispatch fullscreen 1"
+         ];
       };
-      # borders-plus-plus = {
-      #   add_borders = 1;
+      borders-plus-plus = {
+         #add_borders = 1;
           
-      #   bar_color = "rgb(191724)";
+         #col.border_1 = "rgb(FF0000)";
 
-      #   border_size_1 = 2;
+         #border_size_1 = 2;
 
       #   natural_rounding = "yes";
-      # };
+      };
     };
 
     general = {
       gaps_in = "5";
       gaps_out = "10";
-      border_size = "1";
-      "col.active_border" = "rgb(524f67)" ; # rose pine
-      "col.inactive_border" = "rgb(403d52)"; # rose pine
+      border_size = "3";
+      "col.active_border" = "rgb(FFFFFF)" ; # rose pine
+      "col.inactive_border" = "rgb(FF0000)"; # rose pine
 
       # "col.active_border" = "rgb(26233a)" ; # rose pine
       # "col.inactive_border" = "rgb(26233a)"; # rose pine

@@ -2,19 +2,20 @@
   with theme.colors; 
   ''
   * {
-    font-family: "M+1 Nerd Font";
-    font-size: 13px;
+    font-family: "Tamsyn";
+    font-size: 15px;
+    letter-spacing: 2px;
     border: none;
     border-radius: 0;
 
     }
     window#waybar {
-      background: rgb(25, 23, 36);
-      color: rgb(224, 222, 244);
+      background: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
     }
     
     #workspaces button {
-      color: rgb(224, 222, 244);
+      color: rgb(255, 255, 255);
     }
     
     #battery,
@@ -22,12 +23,12 @@
     #clock,
     #wireplumber {
       padding: 0px 5px;
-      font-family: "M+1Code Nerd Font Mono";
+      font-family: "Tamsyn";
     }
 
     #network.wifi,
     #network.ethernet {
-      color: rgb(196, 167, 231);
+      color: rgb(255, 0, 0);
 
     }
 
@@ -39,9 +40,19 @@
     #custom-dividercentre,                    
     #custom-dividerright {
       color: rgb(25, 23, 36);
-      font-family: "M+1 Nerd Font";
+      font-family: "Tamsyn";
     }
   ''    
+
+    #}
+    # rose pine
+    #window#waybar {
+    #  background: rgb(25, 23, 36);
+    #  color: rgb(224, 222, 244);
+    #}
+    #network.ethernet {
+    #  color: rgb(196, 167, 231);3
+    #}
     # rose pine light
     # window#waybar {
     #   background: rgb(250, 244, 237);

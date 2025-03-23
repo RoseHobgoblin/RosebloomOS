@@ -15,6 +15,10 @@
     }
     
     #workspaces button {
+      color: rgb(255, 0, 0);
+    }
+    
+    #workspaces button.active {
       color: rgb(255, 255, 255);
     }
     
@@ -39,7 +43,7 @@
     #custom-dividerleft,
     #custom-dividercentre,                    
     #custom-dividerright {
-      color: rgb(25, 23, 36);
+      color: rgb(255, 0, 0);
       font-family: "Tamsyn";
     }
   ''    

@@ -34,26 +34,27 @@
 
     plugin = {
       hyprbars = {
-        bar_height = 25;
+        bar_height = 20;
         bar_text_size = 10;
         "col.text" = "rgb(FFFFFF)";
-        #bar_text_font = "Victor Mono Bold Italic";
+        bar_text_font = "Tamsyn";
         bar_text_align = "left";
         bar_color = "rgb(FF0000)"; # signalis
         #bar_color = "rgb(26233a)"; # rose pine
         # bar_color = "rgb(f2e9e1)"; # rose pine dawn
         #bar_precedence_over_border = "yes";
-         hyprbars-button = [
-           "rgb(FF0000), 20, ◬, hyprctl dispatch killactive"
-           "rgb(FF0000), 20,▽, hyprctl dispatch fullscreen 1"
-         ];
+        # hyprbars-button = [
+        #   "rgb(FF0000), 20, ◬, hyprctl dispatch killactive"
+        #   "rgb(FF0000), 20,▽, hyprctl dispatch fullscreen 1"
+        # ];
       };
       borders-plus-plus = {
-         #add_borders = 1;
+         add_borders = 2;
           
-         #col.border_1 = "rgb(FF0000)";
+         "col.border_1" = "rgb(000000)";
+         "col.border_2" = "rgb(FF0000)";
 
-         #border_size_1 = 2;
+         border_size_1 = 2;
 
       #   natural_rounding = "yes";
       };
@@ -62,7 +63,7 @@
     general = {
       gaps_in = "5";
       gaps_out = "10";
-      border_size = "3";
+      border_size = "2";
       "col.active_border" = "rgb(FFFFFF)" ; # rose pine
       "col.inactive_border" = "rgb(FF0000)"; # rose pine
 

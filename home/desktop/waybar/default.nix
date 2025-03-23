@@ -111,7 +111,7 @@
 
   xdg.configFile."waybar/modules.json".text = builtins.toJSON {
     "battery" = {
-      format-charging = ''<span foreground="#FF0000">BATTERY </span>{capacity:3}%''; # rose pine
+      format-charging = ''<span foreground="#FF0000">BATTERY </span>{capacity:3}%''; # signalis
       #format-charging = ''<span foreground="#c4a7e7">BATTERY </span>{capacity:3}%''; # rose pine
       #format-charging = ''<span foreground="#907aa9">BATTERY </span>{capacity:3}%''; # rose pine light
       #format-charging = ''<span foreground="#C74DED">BATTERY </span>{capacity:3}%''; # sweet
@@ -146,29 +146,46 @@
         on-scroll-down = "tz_down";
       };
     };
+#
+   # "custom/dividercentre" = {
+   #   format = "」:「";
+   # };
+#
+   # "custom/dividerleft" = {
+   #   format = ":「";
+   # };
+#
+   # "custom/dividerright" = {
+   #   format = "」:";
+   # };
+
+
 
     "custom/dividercentre" = {
-      format = "」:「";
+      format = "──┐:┌──";
     };
 
     "custom/dividerleft" = {
-      format = ":「";
+      format = " ┌──";
     };
 
     "custom/dividerright" = {
-      format = "」:";
+      format = "──┐ ";
     };
   };
 
   xdg.configFile."waybar/hyprlandhortus.json".text = builtins.toJSON {
     "hyprland/workspaces" = {
       on-click = "activate";
-      format = "{icon}";
+      format = "[ {name} ]";
       active-only = false;
       format-icons = {
         "active" = "";
 		    "default" = "";
-        "empty" = "";
+        "empty" = "[  ]";
+        #"active" = "";
+		    #"default" = "";
+        #"empty" = "";
       };
       "persistent-workspaces" = {
         "DP-1" = 4;
@@ -181,7 +198,7 @@
   xdg.configFile."waybar/hyprlandsilva.json".text = builtins.toJSON {
     "hyprland/workspaces" = {
       on-click = "activate";
-      format = "{icon}";
+      format = "[ {name} ]";
       active-only = false;
       format-icons = {
         "active" = "";

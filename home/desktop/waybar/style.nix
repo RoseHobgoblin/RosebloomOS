@@ -11,16 +11,16 @@
     }
     window#waybar {
       background: rgba(0, 0, 0, 0);
-      color: rgb(255, 255, 255);
+      color: #${theme.foreground};
     }
     
     #workspaces button {
-      background: rgb(0, 0, 0);
-      color: rgb(255, 0, 0);
+      background: #${theme.background0};
+      color: #${theme.primary};
     }
     
     #workspaces button.active {
-      color: rgb(255, 255, 255);
+      color: #${theme.foreground};
     }
     
     #workspaces button.empty {
@@ -31,30 +31,27 @@
     #network,
     #clock,
     #wireplumber {
-      background: rgb(0, 0, 0);
-      border: rgb(255, 255, 255);
+      background: #${theme.background0};
       padding: 0px 5px;
       font-family: "Tamsyn";
     }
 
     #network.wifi,
     #network.ethernet {
-      background: rgb(0, 0, 0);
-      border: rgb(255, 255, 255);
-      color: rgb(255, 0, 0);
+      background: #${theme.background0};
+      color: #${theme.primary};
 
     }
 
     #wireplumber.muted {
-      background: rgb(0, 0, 0);
-      border: rgb(255, 255, 255);
-      color: rgb(110, 106, 134);
+      background: #${theme.background0};
+      color: rgb(128, 128, 128);
     }
     
     #custom-dividerleft,
     #custom-dividercentre,                    
     #custom-dividerright {
-      color: rgb(255, 0, 0);
+      color: #${theme.primary};
       font-family: "Tamsyn";
     }
   ''    

@@ -1,7 +1,4 @@
 { inputs, config, ... }:
-let
-  theme = import ./theme;
-in
 {
 
   _module.args.theme = import ../theme;

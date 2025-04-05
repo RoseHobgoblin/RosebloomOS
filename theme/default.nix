@@ -1,1 +1,1 @@
-import ./signalis.nix
+import ./sweet.nix

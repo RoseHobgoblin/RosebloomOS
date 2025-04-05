@@ -5,28 +5,31 @@
   background1 = "000000";
   background2 = "000000";
 
-  foreground = "EBDBB2";
+  foreground = "FFFFFF";
 
-  regular0 = "282828";
-  regular1 = "CC241D";
-  regular2 = "98971A";
-  regular3 = "D79921";
-  regular4 = "458588";
-  regular5 = "B16286";
-  regular6 = "689D6A";
-  regular7 = "A89984";
+  primary = "FF0000";
+  secondary = "00DEFF";
+
+  regular0 = "000000";  
+  regular1 = "cd0000";  
+  regular2 = "00cd00";  
+  regular3 = "cdcd00";  
+  regular4 = "0000ee";  
+  regular5 = "cd00cd";  
+  regular6 = "00cdcd";  
+  regular7 = "e5e5e5";  
   
-  bright0 = "928374";
-  bright1 = "FB4934";
-  bright2 = "B8BB26";
-  bright3 = "FABD2F";
-  bright4 = "83A598";
-  bright5 = "D3869B";
-  bright6 = "8EC07C";
-  bright7 = "EBDBB2";
+  bright0 = "7f7f7f";   
+  bright1 = "ff0000";   
+  bright2 = "00ff00";   
+  bright3 = "ffff00";   
+  bright4 = "5c5cff";   
+  bright5 = "ff00ff";   
+  bright6 = "00ffff";   
+  bright7 = "ffffff";
 
   nvim = {
     plugin = "gruvbox-nvim";
-    colorscheme = "gruvbox";
+    colorscheme = "xterm";
   };
 }

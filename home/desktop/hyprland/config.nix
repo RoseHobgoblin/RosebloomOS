@@ -15,7 +15,7 @@
     exec-once = [
       "waybar"
       "swaybg -o DP-1 -i ${theme.wall1} -o HDMI-A-1 -i ${theme.wall1} -o DP-3 -i ${theme.wall1}"
-      "swaybg -o eDP-1 -i RosebloomOS/theme/ACK.png"
+      "swaybg -o eDP-1 -i ${theme.wall1}"
       "wl-paste --type text --watch cliphist store"
       "wl-paste --type image --watch cliphist store"
       "fcitx5"
@@ -37,14 +37,11 @@
       hyprbars = {
         bar_height = 20;
         bar_text_size = 10;
-        "col.text" = "rgb(FFFFFF)";
+        "col.text" = "rgb(${theme.foreground})";
         bar_text_font = "Tamsyn";
         bar_text_align = "left";
         bar_title_enabled = "false";
-        #bar_color = "rgb(e9e0c5)"; # meigui
-        bar_color = "rgb(FF0000)"; # signalis
-        #bar_color = "rgb(26233a)"; # rose pine
-        # bar_color = "rgb(f2e9e1)"; # rose pine dawn
+        bar_color = "rgb(${theme.primary})"; # signalis
         #bar_precedence_over_border = "yes";
         # hyprbars-button = [
         #   "rgb(FF0000), 20, ◬, hyprctl dispatch killactive"
@@ -72,19 +69,8 @@
       gaps_in = "5";
       gaps_out = "18";
       border_size = "1";
-      # signalis
-      "col.active_border" = "rgb(FFFFFF)" ; 
-      "col.inactive_border" = "rgb(FF0000)";
-      # meigui
-      #"col.active_border" = "rgb(e44180)" ; 
-      #"col.inactive_border" = "rgb(e9e0c5)";
-      # rose pine
-      # "col.active_border" = "rgb(26233a)" ; # 
-      # "col.inactive_border" = "rgb(26233a)"; # rose pine
-      # "col.active_border" = "rgb(f2e9e1)"; # rose pine dawn
-      # "col.inactive_border" = "rgb(f2e9e1)"; # rose pine dawn
-      # "col.active_border" = "rgb(5800E2) rgb(FF00E6)"; # sweet
-      # "col.inactive_border" = "rgb(5800E2) rgb(FF00E6)"; # sweet
+      "col.active_border" = "rgb(${theme.active})" ; 
+      "col.inactive_border" = "rgb(${theme.inactive}))";
 
       layout = "dwindle";
 

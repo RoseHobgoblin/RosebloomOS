@@ -9,6 +9,7 @@
 
   primary = "FF0000";
   secondary = "00DEFF";
+  active  = "FFFFFF";
 
   regular0 = "000000";  
   regular1 = "cd0000";  

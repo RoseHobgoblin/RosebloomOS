@@ -9,6 +9,8 @@
 
   primary = "C74DED";
   secondary = "f9dc5c";
+  active  = "C74DED";
+  inactive = "0C0E14";
 
   regular0 = "282c34";
   regular1 = "ed254e";

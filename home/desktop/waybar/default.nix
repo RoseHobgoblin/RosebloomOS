@@ -111,7 +111,11 @@
 
   xdg.configFile."waybar/modules.json".text = builtins.toJSON {
     "battery" = {
+<<<<<<< HEAD
       #format-charging = ''<span foreground="#FF0000">BATT'TIE </span>{capacity:3}%''; # signalis
+=======
+      format-charging = ''<span foreground="#FF0000">BATTERY </span>{capacity:3}%''; # signalis
+>>>>>>> 4986d047285c65e73cb537f31ba556d456d6f99f
       #format-charging = ''<span foreground="#c4a7e7">BATTERY </span>{capacity:3}%''; # rose pine
       #format-charging = ''<span foreground="#907aa9">BATTERY </span>{capacity:3}%''; # rose pine light
       format-charging = ''<span foreground="#C74DED">BATTERY </span>{capacity:3}%''; # sweet
@@ -182,7 +186,7 @@
       format-icons = {
         "active" = "";
 		    "default" = "";
-        "empty" = "";
+        "empty" = "";
       };
       "persistent-workspaces" = {
         "DP-1" = 4;

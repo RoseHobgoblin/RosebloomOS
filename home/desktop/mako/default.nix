@@ -1,5 +1,5 @@
 { pkgs, config, theme, ... }: {
-  services.mako = {
+  services.mako = with theme.colors; {
     enable = true;
 
     #Sweet
@@ -15,13 +15,14 @@
     #borderColor = "#524f67";
 
     #Signalis
-    #backgroundColor = "#000000";
-    #font = "M+1 Nerd Font 10";
-    #textColor = "#FFFFFF";
-    #borderColor = "#00DEFF";
+    backgroundColor = primary.background;
+    font = "M+1 Nerd Font 10";
+    textColor = "#FFFFFF";
+    borderColor = "#00DEFF";
     borderSize = 2;
     width = 400;
     height = 600;
     maxVisible = 5;
   };
 }
+

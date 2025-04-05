@@ -24,17 +24,17 @@
         height = 30;
         width = 1920;
         modules-left = [ 
-          #"custom/dividerleft" 
-          #"custom/dividerright" 
+          "custom/dividerleft" 
+          "hyprland/workspaces"
+          "custom/dividerright" 
         ];
         modules-center = [
-          "hyprland/workspaces"
         ];
         modules-right = [ 
           "custom/dividerleft" 
-          "network"
-          "custom/dividercentre" 
           "wireplumber" 
+          "custom/dividercentre" 
+          "network"
           "custom/dividercentre" 
           "clock" 
           "custom/dividerright" 
@@ -90,23 +90,22 @@
         height = 30;
         width = 1920;
         modules-left = [ 
-          #"custom/dividerleft" 
-          #"hyprland/workspaces"
-          #"custom/dividerright" 
+          "custom/dividerleft" 
+          "hyprland/workspaces"
+          "custom/dividerright" 
         ];
         modules-center = [
-          "hyprland/workspaces"
         ];
         modules-right = [ 
-          #"custom/dividerleft" 
+          "custom/dividerleft" 
           "battery" 
-          #"custom/dividercentre" 
+          "custom/dividercentre" 
           "wireplumber" 
-          #"custom/dividercentre" 
+          "custom/dividercentre" 
           "network"
-          #"custom/dividercentre" 
+          "custom/dividercentre" 
           "clock" 
-          #"custom/dividerright" 
+          "custom/dividerright" 
         ];
       };
     };

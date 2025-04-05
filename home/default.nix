@@ -8,7 +8,7 @@
   };
   imports = [
     ./packages.nix
-    ./desktop/ags
+    #./desktop/ags
     ./desktop/hyprland
     ./desktop/mako
     #./desktop/swww

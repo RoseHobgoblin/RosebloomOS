@@ -1,5 +1,7 @@
 { pkgs, config, theme, ... }: {
-  services.mako = with theme.colors; {
+  services.mako = let
+    theme = import ../../../theme;
+  in {
     enable = true;
 
     #Sweet
@@ -15,7 +17,7 @@
     #borderColor = "#524f67";
 
     #Signalis
-    backgroundColor = primary.background;
+    backgroundColor = "#${theme.background0}";
     font = "M+1 Nerd Font 10";
     textColor = "#FFFFFF";
     borderColor = "#00DEFF";

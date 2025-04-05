@@ -1,7 +1,4 @@
-{ config, lib, inputs, pkgs, ...}:
-let
-    theme = import ../../theme/signalis.nix { inherit pkgs; };
-in
+{ inputs, ...}:
 {
     imports = [ 
     ./hardware-configuration.nix

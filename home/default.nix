@@ -1,4 +1,7 @@
 { inputs, config, ... }:
+let
+  theme = import ./theme;
+in
 {
 
   _module.args.theme = import ../theme;
@@ -23,6 +26,7 @@
     ./vesktop
     ./zsh
   ];
+  
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
 }

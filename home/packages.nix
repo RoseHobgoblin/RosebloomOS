@@ -29,10 +29,6 @@
     prismlauncher
     palemoon-bin
     neofetch
-<<<<<<< HEAD
     gitkraken
-=======
-
->>>>>>> 4986d047285c65e73cb537f31ba556d456d6f99f
   ];
 }

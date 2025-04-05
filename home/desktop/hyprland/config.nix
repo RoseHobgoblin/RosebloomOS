@@ -13,8 +13,8 @@
 
     exec-once = [
       "waybar"
-      "swaybg -o DP-1 -i RosebloomOS/theme/light/ACHTUNG.png -o HDMI-A-1 -i RosebloomOS/theme/light/ACHTUNG.png -o DP-3 -i RosebloomOS/theme/light/ACHTUNG.png"
-      "swaybg -o eDP-1 -i RosebloomOS/theme/IrisGradient.png"
+      "swaybg -o DP-1 -i RosebloomOS/theme/light/ACK.png -o HDMI-A-1 -i RosebloomOS/theme/light/ACK.png -o DP-3 -i RosebloomOS/theme/light/ACHTUNG.png"
+      "swaybg -o eDP-1 -i RosebloomOS/theme/ACK.png"
       "wl-paste --type text --watch cliphist store"
       "wl-paste --type image --watch cliphist store"
       "fcitx5"
@@ -41,7 +41,7 @@
         bar_text_align = "left";
         bar_title_enabled = "false";
         #bar_color = "rgb(e9e0c5)"; # meigui
-        #bar_color = "rgb(FF0000)"; # signalis
+        bar_color = "rgb(FF0000)"; # signalis
         #bar_color = "rgb(26233a)"; # rose pine
         # bar_color = "rgb(f2e9e1)"; # rose pine dawn
         #bar_precedence_over_border = "yes";
@@ -54,12 +54,12 @@
          add_borders = 2;
           
         # signalis
-        #"col.border_1" = "rgb(000000)";
-        #"col.border_2" = "rgb(FF0000)";
+        "col.border_1" = "rgb(000000)";
+        "col.border_2" = "rgb(FF0000)";
 
         # mei gui
-        "col.border_1" = "rgb(000000)";
-        "col.border_2" = "rgb(e9e0c5)";
+        #"col.border_1" = "rgb(000000)";
+        #"col.border_2" = "rgb(e9e0c5)";
 
          border_size_1 = 2;
 
@@ -69,14 +69,14 @@
 
     general = {
       gaps_in = "5";
-      gaps_out = "10";
-      border_size = "2";
+      gaps_out = "18";
+      border_size = "1";
       # signalis
-      #"col.active_border" = "rgb(FFFFFF)" ; 
-      #"col.inactive_border" = "rgb(FF0000)";
+      "col.active_border" = "rgb(FFFFFF)" ; 
+      "col.inactive_border" = "rgb(FF0000)";
       # meigui
-      "col.active_border" = "rgb(e44180)" ; 
-      "col.inactive_border" = "rgb(e9e0c5)";
+      #"col.active_border" = "rgb(e44180)" ; 
+      #"col.inactive_border" = "rgb(e9e0c5)";
       # rose pine
       # "col.active_border" = "rgb(26233a)" ; # 
       # "col.inactive_border" = "rgb(26233a)"; # rose pine

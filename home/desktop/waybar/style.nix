@@ -10,11 +10,12 @@
 
     }
     window#waybar {
-      background: rgb(0, 0, 0);
+      background: rgba(0, 0, 0, 0);
       color: rgb(255, 255, 255);
     }
     
     #workspaces button {
+      background: rgb(0, 0, 0);
       color: rgb(255, 0, 0);
     }
     
@@ -30,17 +31,23 @@
     #network,
     #clock,
     #wireplumber {
+      background: rgb(0, 0, 0);
+      border: rgb(255, 255, 255);
       padding: 0px 5px;
       font-family: "Tamsyn";
     }
 
     #network.wifi,
     #network.ethernet {
+      background: rgb(0, 0, 0);
+      border: rgb(255, 255, 255);
       color: rgb(255, 0, 0);
 
     }
 
     #wireplumber.muted {
+      background: rgb(0, 0, 0);
+      border: rgb(255, 255, 255);
       color: rgb(110, 106, 134);
     }
     

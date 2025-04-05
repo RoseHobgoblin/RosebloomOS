@@ -39,7 +39,7 @@
   
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, ags, ... } @ inputs: 
+  outputs = { nixpkgs, home-manager, hyprland, ... } @ inputs: 
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {

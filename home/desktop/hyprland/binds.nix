@@ -1,14 +1,19 @@
 {
   config,
+  pkgs,
   lib,
+  inputs,
   ...
 }:
 let
     Mod = "SUPER";
     Modshift = "${Mod}SHIFT";
+    agsPath = "${inputs.ags.packages.${pkgs.system}.ags}/bin/ags";
 in {
   wayland.windowManager.hyprland.settings = {
     bind = [
+      "${Mod} SHIFT, U, exec, ${agsPath} toggle power"
+      "${Mod} SHIFT, Y, exec, ${agsPath} toggle bar"
       "${Mod}, RETURN, exec, foot"
       "${Modshift},Q, killactive,"
       "${Mod}, M, exit,"

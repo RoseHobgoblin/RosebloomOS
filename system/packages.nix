@@ -25,6 +25,5 @@ in
     zenity
     p7zip
     #(libsForQt5.callPackage ../zkanji/package.nix {})
-    astal.packages.${system}.default]
   ];
 }

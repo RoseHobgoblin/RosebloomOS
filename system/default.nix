@@ -43,7 +43,6 @@
       i-dot-ming
       tamsyn
       nerd-fonts.code-new-roman
-      timesnew
     ];
     fontconfig = {
       enable = true;

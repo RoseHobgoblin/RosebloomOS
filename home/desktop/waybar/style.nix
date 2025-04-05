@@ -15,7 +15,15 @@
     }
     
     #workspaces button {
+      color: rgb(255, 0, 0);
+    }
+    
+    #workspaces button.active {
       color: rgb(255, 255, 255);
+    }
+    
+    #workspaces button.empty {
+      color: rgb(128, 128, 128);
     }
     
     #battery,
@@ -39,7 +47,7 @@
     #custom-dividerleft,
     #custom-dividercentre,                    
     #custom-dividerright {
-      color: rgb(25, 23, 36);
+      color: rgb(255, 0, 0);
       font-family: "Tamsyn";
     }
   ''    

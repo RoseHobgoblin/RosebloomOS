@@ -111,27 +111,27 @@
 
   xdg.configFile."waybar/modules.json".text = builtins.toJSON {
     "battery" = {
-      format-charging = ''<span foreground="#FF0000">BATTERY </span>{capacity:3}%''; # rose pine
+      #format-charging = ''<span foreground="#FF0000">BATT'TIE </span>{capacity:3}%''; # signalis
       #format-charging = ''<span foreground="#c4a7e7">BATTERY </span>{capacity:3}%''; # rose pine
       #format-charging = ''<span foreground="#907aa9">BATTERY </span>{capacity:3}%''; # rose pine light
-      #format-charging = ''<span foreground="#C74DED">BATTERY </span>{capacity:3}%''; # sweet
-      format = ''<span foreground="#e0def4">BATTERY </span>{capacity:3}%'';
+      format-charging = ''<span foreground="#C74DED">BATTERY </span>{capacity:3}%''; # sweet
+      format = ''<span foreground="#e0def4">BATT'TIE </span>{capacity:3}%'';
     };
 
     "wireplumber" = {
-      format = ''<span foreground="#FF0000">VOLUME </span>{volume:3}%''; # rose pine
+      #format = ''<span foreground="#FF0000">VOLEUNME </span>{volume:3}%''; # signalis
       #format = ''<span foreground="#c4a7e7">VOLUME </span>{volume:3}%''; # rose pine
       #format = ''<span foreground="#907aa9">VOLUME </span>{volume:3}%''; # rose pine light
-      #format = ''<span foreground="#C74DED">VOLUME </span>{volume:3}%''; # sweet
-      format-muted = ''VOLUME {volume:3}%'';
+      format = ''<span foreground="#C74DED">VOLUME </span>{volume:3}%''; # sweet
+      format-muted = ''VOLEUNME {volume:3}%'';
       max-volume = "150";
       scroll-step = "0.2";
     };
     
     "network" = {
-      format-wifi = "NETWORK";
-      format-ethernet = "NETWORK";
-      format-disconnected = "NETWORK";
+      format-wifi = "DRANNET";
+      format-ethernet = "DRANNET";
+      format-disconnected = "DRANNET";
     };
 
     "clock" = {
@@ -146,29 +146,43 @@
         on-scroll-down = "tz_down";
       };
     };
+#
+   # "custom/dividercentre" = {
+   #   format = "」:「";
+   # };
+#
+   # "custom/dividerleft" = {
+   #   format = ":「";
+   # };
+#
+   # "custom/dividerright" = {
+   #   format = "」:";
+   # };
+
+
 
     "custom/dividercentre" = {
-      format = "」:「";
+      format = "──┐:┌──";
     };
 
     "custom/dividerleft" = {
-      format = ":「";
+      format = " ┌──";
     };
 
     "custom/dividerright" = {
-      format = "」:";
+      format = "──┐ ";
     };
   };
 
   xdg.configFile."waybar/hyprlandhortus.json".text = builtins.toJSON {
     "hyprland/workspaces" = {
       on-click = "activate";
-      format = "{icon}";
+      format = "[ {name} ]";
       active-only = false;
       format-icons = {
         "active" = "";
 		    "default" = "";
-        "empty" = "";
+        "empty" = "";
       };
       "persistent-workspaces" = {
         "DP-1" = 4;
@@ -181,7 +195,7 @@
   xdg.configFile."waybar/hyprlandsilva.json".text = builtins.toJSON {
     "hyprland/workspaces" = {
       on-click = "activate";
-      format = "{icon}";
+      format = "[ {name} ]";
       active-only = false;
       format-icons = {
         "active" = "";

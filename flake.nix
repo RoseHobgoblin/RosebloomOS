@@ -39,14 +39,14 @@
   
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, ... } @ inputs: 
+  outputs = { nixpkgs, home-manager, hyprland, ags, astal, ... } @ inputs: 
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
     };
-  in {
+  in  {
     nixosConfigurations."hortus" = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs system; };
       modules = [ ./hosts/hortus ];

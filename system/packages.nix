@@ -19,11 +19,12 @@ in
     libreoffice
     wineWowPackages.stable
     wgnord
-    (callPackage ../modules/ammo/package.nix {})
+    #(callPackage ../modules/ammo/package.nix {})
     #(callPackage ../modules/rinpy/package.nix {})
     protontricks
     zenity
     p7zip
     #(libsForQt5.callPackage ../zkanji/package.nix {})
+    astal.packages.${system}.default]
   ];
 }

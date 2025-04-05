@@ -28,6 +28,7 @@
     ranger
     prismlauncher
     palemoon-bin
-
+    neofetch
+    gitkraken
   ];
 }

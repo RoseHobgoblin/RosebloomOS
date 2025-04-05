@@ -18,29 +18,25 @@
 	      blink = true;
       };
 
-      colors = { # Signalis colours
-background = "000000";   # Black background
-foreground = "e5e5e5";   # Light gray text
-
-regular0 = "000000";     # Black for regular text
-regular1 = "cd0000";     # Red for danger/urgency
-regular2 = "00cd00";     # Green for regular info
-regular3 = "cdcd00";     # Yellow for warnings
-regular4 = "0000ee";     # Blue for regular highlights
-regular5 = "cd00cd";     # Magenta for secondary elements
-regular6 = "00cdcd";     # Cyan for accent
-regular7 = "e5e5e5";     # White for neutral elements
-
-bright0 = "7f7f7f";      # Bright black (dimmed gray)
-bright1 = "ff0000";      # Bright red for urgent alerts
-bright2 = "00ff00";      # Bright green for active elements
-bright3 = "ffff00";      # Bright yellow for highlighted warnings
-bright4 = "5c5cff";      # Bright blue for more intense info
-bright5 = "ff00ff";      # Bright magenta for emphasis
-bright6 = "00ffff";      # Bright cyan for vivid accents
-bright7 = "ffffff";      # Bright white for extreme emphasis
-
-
+      colors = { # Signalis Colours
+        background = "000000";
+        foreground = "e5e5e5";
+        regular0 = "000000";  
+        regular1 = "cd0000";  
+        regular2 = "00cd00";  
+        regular3 = "cdcd00";  
+        regular4 = "0000ee";  
+        regular5 = "cd00cd";  
+        regular6 = "00cdcd";  
+        regular7 = "e5e5e5";  
+        bright0 = "7f7f7f";   
+        bright1 = "ff0000";   
+        bright2 = "00ff00";   
+        bright3 = "ffff00";   
+        bright4 = "5c5cff";   
+        bright5 = "ff00ff";   
+        bright6 = "00ffff";   
+        bright7 = "ffffff";
       };
 
       #colors = { # Rose Pine Colours

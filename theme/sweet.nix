@@ -8,7 +8,7 @@
   foreground = "c3c7d1";
 
   primary = "C74DED";
-  secondary = "00DEFF";
+  secondary = "f9dc5c";
 
   regular0 = "282c34";
   regular1 = "ed254e";

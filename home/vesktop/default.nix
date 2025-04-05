@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   # credits: neoney
-  xdg.configFile."vesktop/themes/RosePine.theme.css".source = ./theme.css;
+  #xdg.configFile."vesktop/themes/RosePine.theme.css".source = ./theme.css;
   home.packages = [
   pkgs.vesktop
 #    (pkgs.vesktop.overrideAttrs (old: {

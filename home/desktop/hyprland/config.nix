@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  theme,
   ...
 }: {
   wayland.windowManager.hyprland.settings = {
@@ -13,7 +14,7 @@
 
     exec-once = [
       "waybar"
-      "swaybg -o DP-1 -i RosebloomOS/theme/light/ACK.png -o HDMI-A-1 -i RosebloomOS/theme/light/ACK.png -o DP-3 -i RosebloomOS/theme/light/ACHTUNG.png"
+      "swaybg -o DP-1 -i ${theme.wall1} -o HDMI-A-1 -i ${theme.wall1} -o DP-3 -i ${theme.wall1}"
       "swaybg -o eDP-1 -i RosebloomOS/theme/ACK.png"
       "wl-paste --type text --watch cliphist store"
       "wl-paste --type image --watch cliphist store"

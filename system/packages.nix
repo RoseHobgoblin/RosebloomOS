@@ -25,5 +25,10 @@ in
     zenity
     p7zip
     #(libsForQt5.callPackage ../zkanji/package.nix {})
+    ffmpeg-headless
+    ffmpegthumbnailer
+    gdk-pixbuf
+    libheif
+    libheif.out
   ];
 }

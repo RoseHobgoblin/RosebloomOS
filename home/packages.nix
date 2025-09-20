@@ -36,5 +36,6 @@
     rstudio
     dia
     obsidian
+    
   ];
 }

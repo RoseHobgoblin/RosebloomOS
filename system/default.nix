@@ -10,6 +10,7 @@
     ./boot.nix
     ./greetd.nix
     ./packages.nix
+    ./sync.nix
   ];
 
   environment.etc = {
@@ -35,7 +36,6 @@
     enableDefaultPackages = true;
     packages = with pkgs; [
       openmoji-color
-      nerd-fonts.mplus
       roboto
       roboto-slab
       mplus-outline-fonts.githubRelease
@@ -66,6 +66,7 @@
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
 
+
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
@@ -85,6 +86,8 @@
 
   networking.networkmanager.enable = true;
   networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
+  networking.enableIPv6 = false;
+
 
   time.timeZone = "Pacific/Auckland";
   time.hardwareClockInLocalTime = true;

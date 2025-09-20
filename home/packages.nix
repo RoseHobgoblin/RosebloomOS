@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     wl-clipboard 
     wofi 
-    vscodium 
+    #vscodium 
     git 
     pavucontrol
     swaybg
@@ -22,7 +22,6 @@
     yt-dlp
     anki-bin
     ungoogled-chromium
-    microsoft-edge
     ffmpeg
     gifsicle
     ranger
@@ -30,5 +29,12 @@
     palemoon-bin
     neofetch
     gitkraken
+    godot
+    chntpw
+    vscode
+    telegram-desktop
+    rstudio
+    dia
+    obsidian
   ];
 }

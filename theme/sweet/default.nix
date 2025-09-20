@@ -30,6 +30,8 @@
   bright6 = "00c1e4";
   bright7 = "dcdcdd";
 
+  wall1 = "RosebloomOS/theme/sweet/tui-outlines16:9.png";
+
   nvim = {
     plugin = "gruvbox-nvim";
     colorscheme = "xterm";

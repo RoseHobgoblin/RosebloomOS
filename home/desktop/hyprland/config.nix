@@ -67,10 +67,10 @@
 
     general = {
       gaps_in = "5";
-      gaps_out = "18";
+      gaps_out = "20";
       border_size = "1";
       "col.active_border" = "rgb(${theme.active})" ; 
-      "col.inactive_border" = "rgb(${theme.inactive}))";
+      "col.inactive_border" = "rgb(${theme.inactive})";
 
       layout = "dwindle";
 

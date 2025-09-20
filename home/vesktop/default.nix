@@ -104,7 +104,7 @@
       NoDevtoolsWarning.enabled = true;
       NormalizeMessageLinks.enabled = true;
       NoF1.enabled = true;
-      NoReplyMention.enabled = true;
+      NoReplyMention.enabled = false;
       NoScreensharePreview.enabled = false;
       NoTrack.enabled = true;
       NoUnblockToJump.enabled = true;

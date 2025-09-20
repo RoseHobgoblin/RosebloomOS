@@ -6,4 +6,5 @@
     ../../system
     ];
     networking.hostName = "hortus";
+    hardware.opengl.enable = true;
 }

@@ -26,7 +26,7 @@
             "Renan"
           ];
         };
-        "k4vqh-foo" = {
+        "55fno-sphyy" = {
           label = "Academia";
           path = "/home/rosa/Sync/02_Academia/";
           # Share with these devices
@@ -43,7 +43,7 @@
           ];
         };
         "vfrp5-ggyda" = {
-          label = "Academia";
+          label = "Archive";
           path = "/home/rosa/Sync/04_Archive/";
           # Share with these devices
           devices = [

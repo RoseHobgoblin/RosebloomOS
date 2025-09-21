@@ -42,6 +42,7 @@
       victor-mono
       i-dot-ming
       tamsyn
+      nerd-fonts."m+"
       nerd-fonts.code-new-roman
     ];
     fontconfig = {

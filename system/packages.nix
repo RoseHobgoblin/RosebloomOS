@@ -30,5 +30,6 @@ in
     gdk-pixbuf
     libheif
     libheif.out
+    webp-pixbuf-loader
   ];
 }
